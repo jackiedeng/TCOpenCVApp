@@ -36,12 +36,24 @@
 - (UIView* _Nonnull)createView:(NSDictionary* _Nonnull)config{
     return [UIView new];
 }
+
+- (NSString* _Nonnull)displayText{
+    return [NSString stringWithFormat:@"%@ : %@",self.key,self.value];
+}
     
 - (void)fillValueToDict:(NSMutableDictionary*)dict{
     
     if(self.value){
+        
         [dict setObject:self.value
                  forKey:self.key];
+        
+        if(self.displayLabel){
+            
+            self.displayLabel.text = [self displayText];
+            
+            [self.displayLabel sizeToFit];
+        }
     }
 }
     

@@ -13,6 +13,6 @@ int main(int argc, char * argv[]) {
 
 //    cvNamedWindow("Image", CV_WINDOW_AUTOSIZE);
         @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+            return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

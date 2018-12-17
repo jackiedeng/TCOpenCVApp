@@ -9,8 +9,6 @@
 #import "OpCVBaseViewController.h"
 #import "SlideConfigItem.h"
 
-using namespace std;
-using namespace cv;
 
 @interface OpCVBaseViewController ()<OpCvConfigItemUpdateProtocol>
 {
@@ -61,13 +59,14 @@ using namespace cv;
 
 #pragma mark -
 #pragma mark create controls
-- (UILabel*)titleLabel:(NSString*)title height:(float)height{
+- (UILabel*)titleLabel:(NSString*)title
+                height:(float)height{
     
     UILabel * label = [[UILabel alloc] init];
     label.text = title;
     label.font = [UIFont boldSystemFontOfSize:17];
     [label sizeToFit];
-    label.frame = CGRectInset(label.frame, 0, -10);
+//    label.frame = CGRectInset(label.frame, 0, -5);
     label.layer.anchorPoint = CGPointZero;
     label.center = CGPointMake(0, height);
     
@@ -84,12 +83,15 @@ using namespace cv;
         
         UILabel * label = [self titleLabel:item.title
                                     height:height];
+        [_contentView addSubview:label];
         
         height += label.frame.size.height;
         
         subView.layer.anchorPoint = CGPointZero;
         subView.center = CGPointMake(0, height);
         [_contentView addSubview:subView];
+        
+        item.displayLabel = label;
         
         height += subView.frame.size.height;
         
@@ -106,7 +108,15 @@ using namespace cv;
     
     _targetLabel = [UILabel new];
     _targetLabel.layer.anchorPoint = CGPointZero;
-    [_controlViews addObject:_targetLabel];
+    [_contentView addSubview:_targetLabel];
+    _targetLabel.layer.zPosition = 1000;
+    _targetLabel.backgroundColor = [UIColor blackColor];
+    _targetLabel.font = [UIFont systemFontOfSize:16];
+    _targetLabel.textColor = [UIColor whiteColor];
+    [_contentView setAlwaysBounceVertical:YES];
+    
+    _targetImageView = [UIImageView new];
+    [_contentView addSubview:_targetImageView];
     
     float height = 0;
     
@@ -120,6 +130,10 @@ using namespace cv;
     }
     
     [_contentView setContentSize:CGSizeMake(self.view.frame.size.width, height)];
+    
+    [_contentView setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:_contentView];
 }
 
     
@@ -150,6 +164,8 @@ using namespace cv;
         view.center = CGPointMake(0, height);
         height += view.frame.size.height;
     }
+    
+    [_contentView setContentSize:CGSizeMake(self.view.frame.size.width, height)];
 }
     
 - (void)updateTargetImage{
@@ -175,6 +191,8 @@ using namespace cv;
         [_targetImageView setImage:image];
     
         [self layoutWithAllItem];
+    }else{
+        NSLog(@"is empty!");
     }
 }
 #pragma mark -
@@ -193,5 +211,18 @@ using namespace cv;
     UIImageToMat(image, src);
     
     return src;
+}
+
+- (cv::Mat)imageNamed:(NSString*_Nonnull)image{
+    
+    Mat src;
+    UIImageToMat([UIImage imageNamed:image], src);
+    return src;
+}
+
+- (instancetype)valueFromConfig:(NSString*)key
+                         config:(NSDictionary*)config{
+    
+    return [config objectForKey:key];
 }
 @end

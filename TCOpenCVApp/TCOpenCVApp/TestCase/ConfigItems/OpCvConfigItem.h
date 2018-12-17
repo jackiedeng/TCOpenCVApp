@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong) NSMutableDictionary * config;
 @property(strong) NSString * title;
 @property(strong) NSString * key;
+@property(weak) UILabel * displayLabel;
 @property(weak) id value;
 @property(weak) id view;
 @property(weak) id<OpCvConfigItemUpdateProtocol> delegate;
@@ -37,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
                           key:(NSString* _Nonnull)key
                        Config:(void(^)(NSMutableDictionary* _Nonnull))dictBlock;
 - (UIView* _Nonnull)itemView;
+- (NSString* _Nonnull)displayText;
 - (CGRect)rectWithHeight:(float)height;
 - (void)setNeedUpdate;
 @end

@@ -12,6 +12,7 @@
 #define defaultValueKey @"defaultValueKey"
 
 @implementation SlideConfigItem
+
 + (instancetype)slideConfigWithTitle:(NSString* _Nonnull)title
                                 key:(NSString* _Nonnull) key
                               range:(NSRange)range
@@ -26,6 +27,7 @@
                                                                     [dict setObject:[NSNumber numberWithFloat:defaultvalue]
                                                                              forKey:defaultValueKey];
                                                                 }];
+    newItem.value = [NSNumber numberWithFloat:defaultvalue];
     
     return newItem;
 }
