@@ -16,16 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    
-    imageView.image = [OpenCVTool test];
-    
-    [imageView sizeToFit];
-    
-    imageView.layer.anchorPoint = CGPointZero;
-    imageView.center = CGPointMake(0, (self.view.frame.size.height-imageView.frame.size.height)/2);
-    [self.view addSubview:imageView];
+  
     
 }
 

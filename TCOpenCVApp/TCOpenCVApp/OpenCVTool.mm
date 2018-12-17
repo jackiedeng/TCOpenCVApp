@@ -20,35 +20,39 @@ using namespace cv;
     NSLog(@"begin>>>>");
     Mat d,dd;
     
-    int width = 300;
-    int height = 50;
-    
-    d = Mat(Size_<int>(width,height),CV_8UC3,Scalar(255,0,0));
-//    UIImage * image = [UIImage imageNamed:@"test.png"];
+   
+    double t = (double)getTickCount();
+  
+//    d = Mat(Size_<int>(width,height),CV_8UC3,Scalar(255,0,0));
+    UIImage * image = [UIImage imageNamed:@"test.png"];
 //
-//    UIImageToMat(image, d);
+    UIImageToMat(image, d);
     
-    dd = Mat(d,Rect_<int>(0,0,50,50));
+    int width = d.cols;
+    int height = d.rows;
+    
+    cout<<"width:"<<width<<endl<<"height:"<<height<<endl;
+    
+    dd = Mat(d,Rect_<int>(0,0,width/2,height/2));
     
     MatIterator_<Vec3b> interator;
     
-    for(interator=dd.begin<Vec3b>();interator != dd.end<Vec3b>();interator++){
-        (*interator)[2] = 255;
-    }
-//    for(int row = 10; row < 20; row++){
-//
-//        for(int col = 0; col < d.cols; col++){
-//
-//            Vec3b vec;
-//            vec[0] = 0;
-//            vec[1] = 255;
-//            vec[2] = 0;
-//
-//            d.at<Vec3b>(row,col) = vec;
-//        }
-//    }
-//
-    cout<<dd;
+    Mat filter = (Mat_<char>(5,5) <<  0,0,0,0,0,
+                                      0,0,0,0,0,
+                                      -1,0,3,0,-1,
+                                      0,0,0,0,0,
+                                      0,0,0,0,0
+    );
+    
+    filter2D(dd, dd, dd.depth(), filter);
+    
+    t = ((double)getTickCount() - t)/getTickFrequency();
+    
+    Mat redBackgrond = Mat(d.rows,d.cols,d.type(),Scalar(255,0,0));
+    
+    addWeighted(d, 0.6, redBackgrond, 0.4, 0.0, d);
+    
+    cout<<"use time:"<<t;
     return MatToUIImage(d);
 }
     

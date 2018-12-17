@@ -19,6 +19,9 @@
 		A1DECADF21C74CD6009F3693 /* TCOpenCVAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECADE21C74CD6009F3693 /* TCOpenCVAppUITests.m */; };
 		A1DECAEE21C74FC5009F3693 /* OpenCVTool.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAED21C74FC5009F3693 /* OpenCVTool.mm */; };
 		A1DECAF421C754D5009F3693 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAF321C754D5009F3693 /* test.png */; };
+		A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */; };
+		A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */; };
+		A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */; };
 		FB87D3CC37E3F14772A5FD48 /* libPods-TCOpenCVAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789F80FC93ECDE984DDA10F /* libPods-TCOpenCVAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,12 @@
 		A1DECAED21C74FC5009F3693 /* OpenCVTool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVTool.mm; sourceTree = "<group>"; };
 		A1DECAEF21C75138009F3693 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A1DECAF321C754D5009F3693 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		A1DECAF621C79CA2009F3693 /* OpCVBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpCVBaseViewController.h; sourceTree = "<group>"; };
+		A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpCVBaseViewController.mm; sourceTree = "<group>"; };
+		A1DECAFA21C79F57009F3693 /* OpCvConfigItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpCvConfigItem.h; sourceTree = "<group>"; };
+		A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpCvConfigItem.m; sourceTree = "<group>"; };
+		A1DECAFD21C7A38F009F3693 /* SlideConfigItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideConfigItem.h; sourceTree = "<group>"; };
+		A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideConfigItem.m; sourceTree = "<group>"; };
 		A5F40B50505995D50DB4D435 /* libPods-TCOpenCVApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCOpenCVApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BE8D49A7169B1BB7389977 /* Pods-TCOpenCVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFB4502B38EBA744E25207D2 /* Pods-TCOpenCVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +156,7 @@
 		A1DECAB921C74CD4009F3693 /* TCOpenCVApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1DECAF521C79C85009F3693 /* TestCase */,
 				A1DECAF221C754D5009F3693 /* images */,
 				A1DECABA21C74CD4009F3693 /* AppDelegate.h */,
 				A1DECABB21C74CD4009F3693 /* AppDelegate.m */,
@@ -188,6 +198,27 @@
 				A1DECAF321C754D5009F3693 /* test.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		A1DECAF521C79C85009F3693 /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				A1DECAF921C79F3F009F3693 /* ConfigItems */,
+				A1DECAF621C79CA2009F3693 /* OpCVBaseViewController.h */,
+				A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */,
+			);
+			path = TestCase;
+			sourceTree = "<group>";
+		};
+		A1DECAF921C79F3F009F3693 /* ConfigItems */ = {
+			isa = PBXGroup;
+			children = (
+				A1DECAFA21C79F57009F3693 /* OpCvConfigItem.h */,
+				A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */,
+				A1DECAFD21C7A38F009F3693 /* SlideConfigItem.h */,
+				A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */,
+			);
+			path = ConfigItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,8 +426,11 @@
 			files = (
 				A1DECAEE21C74FC5009F3693 /* OpenCVTool.mm in Sources */,
 				A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */,
+				A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
+				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
+				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
