@@ -95,6 +95,9 @@ forCellReuseIdentifier:@"cell"];
     
     OpCVBaseViewController * vc = (OpCVBaseViewController*)[_testCtrs objectAtIndex:indexPath.row];
     
+    [tableView deselectRowAtIndexPath:indexPath
+                             animated:YES];
+    
     [self.navigationController pushViewController:vc
                                          animated:YES];
     
