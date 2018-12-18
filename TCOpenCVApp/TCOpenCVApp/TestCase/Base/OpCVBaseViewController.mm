@@ -246,7 +246,7 @@
 
     t = ((double)getTickCount() - t)/getTickFrequency();
     
-    _mainLabel.text = [NSString stringWithFormat:@"%@ cost:%.5f",[self title],t];
+    _mainLabel.text = [NSString stringWithFormat:@"%@ 耗时:%.5f",[self title],t];
     [_mainLabel sizeToFit];
     _mainLabel.layer.anchorPoint = CGPointMake(0.5, 0);
     
