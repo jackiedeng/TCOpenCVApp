@@ -15,6 +15,7 @@
 		8D4F8FB4902ACCC1F15CCADB /* libPods-TCOpenCVApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F40B50505995D50DB4D435 /* libPods-TCOpenCVApp.a */; };
 		A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */; };
 		A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */; };
+		A1D68D2621C90F13002F618F /* testcase.info in Resources */ = {isa = PBXBuildFile; fileRef = A1D68D2521C90F13002F618F /* testcase.info */; };
 		A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABB21C74CD4009F3693 /* AppDelegate.m */; };
 		A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABE21C74CD4009F3693 /* ViewController.m */; };
 		A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAC021C74CD4009F3693 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpResultImagePreview.m; sourceTree = "<group>"; };
 		A1D68D2121C8F3FC002F618F /* MultiStageTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiStageTestCase.h; sourceTree = "<group>"; };
 		A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiStageTestCase.m; sourceTree = "<group>"; };
+		A1D68D2521C90F13002F618F /* testcase.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testcase.info; sourceTree = SOURCE_ROOT; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A1D68D2421C90EFB002F618F /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68D2521C90F13002F618F /* testcase.info */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		A1DECAAE21C74CD4009F3693 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		A1DECAB921C74CD4009F3693 /* TCOpenCVApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1D68D2421C90EFB002F618F /* setting */,
 				A1DECAF521C79C85009F3693 /* TestCase */,
 				A1DECAF221C754D5009F3693 /* images */,
 				A1DECABA21C74CD4009F3693 /* AppDelegate.h */,
@@ -271,6 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1DECAE321C74CD6009F3693 /* Build configuration list for PBXNativeTarget "TCOpenCVApp" */;
 			buildPhases = (
+				A1D68D2721C91824002F618F /* Auto Scan test case */,
 				884E0112CE96738398742C68 /* [CP] Check Pods Manifest.lock */,
 				A1DECAB321C74CD4009F3693 /* Sources */,
 				A1DECAB421C74CD4009F3693 /* Frameworks */,
@@ -372,6 +384,7 @@
 			files = (
 				A1DECAC721C74CD6009F3693 /* LaunchScreen.storyboard in Resources */,
 				A1DECAC421C74CD6009F3693 /* Assets.xcassets in Resources */,
+				A1D68D2621C90F13002F618F /* testcase.info in Resources */,
 				A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */,
 				A1DECAF421C754D5009F3693 /* test.png in Resources */,
 			);
@@ -459,6 +472,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A1D68D2721C91824002F618F /* Auto Scan test case */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Auto Scan test case";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh ./auto_scan_testcase.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

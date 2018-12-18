@@ -10,15 +10,6 @@
 #import "OpenCVTool.h"
 #import "OpCVBaseViewController.h"
 
-NSString * vcs[] = {
-    @"CVTransparentTestCase",
-    @"ContrastAndBrightnessTestCase",
-    @"BaseDrawTestVase",
-    @"RandomDrawTestCase",
-    @"MultiStageTestCase"
-};
-
-
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray<OpCVBaseViewController*> * _testCtrs;
@@ -33,17 +24,37 @@ NSString * vcs[] = {
     NSLog(@"did load!!!!!");
     self.navigationItem.title = @"opencv lab";
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    //read info
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"testcase"
+                                                      ofType: @"info"];
     
+    NSError * error = nil;
+    NSString * setting = [NSString stringWithContentsOfFile:path
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:&error];
+    NSArray * testcases = @[];
+    
+    if(error){
+        NSLog(@"read error");
+    }else{
+        setting = [setting stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        testcases = [setting componentsSeparatedByString:@","];
+    }
+    
+    NSLog(@"read file:%@",setting);
+
     _testCtrs = [NSMutableArray<OpCVBaseViewController*> array];
     
-    for(int i = 0; i < sizeof(vcs)/sizeof(vcs[0]);i++){
-        Class vc = NSClassFromString(vcs[i]);
+    for(int i = 0; i < testcases.count;i++){
+        Class vc = NSClassFromString(testcases[i]);
         if(vc){
             id vcinstance = [[vc alloc] init];
             
             if(vcinstance && [vcinstance isKindOfClass:[OpCVBaseViewController class]]){
                 [_testCtrs addObject:vcinstance];
             }
+        }else{
+            NSLog(@"not found class for [%@]",testcases[i]);
         }
     }
   

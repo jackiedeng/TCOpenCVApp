@@ -45,7 +45,7 @@
     //label
     UILabel * label = [[UILabel alloc] init];
     label.textColor = [UIColor blackColor];
-    label.font = [UIFont systemFontOfSize:13];
+    label.font = [UIFont fontWithName:@"BanglaSangamMN-Bold" size:15];
     label.text = item.title;
     [label sizeToFit];
     //imageview
@@ -55,9 +55,12 @@
     
     //size to fit
     CGRect rect = imageView.bounds;
-    rect.size.height *=  ([UIScreen mainScreen].bounds.size.width/rect.size.width);
-    rect.size.width = [UIScreen mainScreen].bounds.size.width;
-    imageView.frame = rect;
+    
+    if(rect.size.width > [UIScreen mainScreen].bounds.size.width){
+        rect.size.height *=  ([UIScreen mainScreen].bounds.size.width/rect.size.width);
+        rect.size.width = [UIScreen mainScreen].bounds.size.width;
+        imageView.frame = rect;
+    }
 
     //layout
     [self addSubview:label];
@@ -67,10 +70,13 @@
     label.center = CGPointMake(10, 10);
     
     imageView.layer.anchorPoint = CGPointZero;
-    imageView.center = CGPointMake(0, label.frame.origin.y+label.frame.size.height+10);
+    imageView.center = CGPointMake(
+                                   ([UIScreen mainScreen].bounds.size.width-imageView.frame.size.width)/2,
+                                   label.frame.origin.y+label.frame.size.height+10);
     
-    [self setFrame:CGRectMake(0, 0,
-                              imageView.frame.size.width,
+    [self setFrame:CGRectMake(0,
+                              0,
+                              [UIScreen mainScreen].bounds.size.width,
                               imageView.frame.size.height+imageView.frame.origin.y+10)];
 }
 

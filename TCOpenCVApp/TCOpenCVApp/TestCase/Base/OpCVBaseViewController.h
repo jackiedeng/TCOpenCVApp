@@ -30,6 +30,8 @@ typedef enum{
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OpCVBaseViewController : UIViewController
+//所有测试
+
 - (NSString*)title;
 - (NSArray*)controlItems;
 //处理流程 处理单张还是多张 默认single_image

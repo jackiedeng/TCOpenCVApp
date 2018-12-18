@@ -24,8 +24,10 @@
 
 @implementation OpCVBaseViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view.
     _dicts = [NSMutableDictionary dictionary];
     _controlViews = [NSMutableArray array];
@@ -36,15 +38,15 @@
     
 
 - (NSString*)title{
-    return @"defalut";
+    return @"hello world";
 }
     
 - (NSArray*)controlItems{
     return @[
-             [SlideConfigItem slideConfigWithTitle:@"alpha"
-                                               key:@"alpha"
-                                             range:NSMakeRange(0, 1)
-                                      defaultValue:0.5]
+//             [SlideConfigItem slideConfigWithTitle:@"alpha"
+//                                               key:@"alpha"
+//                                             range:NSMakeRange(0, 1)
+//                                      defaultValue:0.5]
              ];
 }
 /*
@@ -108,7 +110,7 @@
     
     _mainLabel = [UILabel new];
     _mainLabel.layer.anchorPoint = CGPointZero;
-    [_contentView addSubview:_mainLabel];
+    [self.view addSubview:_mainLabel];
     _mainLabel.layer.zPosition = 1000;
     _mainLabel.backgroundColor = [UIColor blackColor];
     _mainLabel.font = [UIFont systemFontOfSize:16];
@@ -131,6 +133,7 @@
     [_contentView setBackgroundColor:[UIColor whiteColor]];
     
     [self.view addSubview:_contentView];
+    [self.view bringSubviewToFront:_mainLabel];
 }
 
     
@@ -139,6 +142,8 @@
     [super viewWillLayoutSubviews];
     
     _contentView.frame = self.view.bounds;
+    
+    _mainLabel.center = CGPointMake(self.view.frame.size.width/2, 0);
 }
     
 #pragma mark -
@@ -243,6 +248,7 @@
     
     _mainLabel.text = [NSString stringWithFormat:@"%@ cost:%.5f",[self title],t];
     [_mainLabel sizeToFit];
+    _mainLabel.layer.anchorPoint = CGPointMake(0.5, 0);
     
     //fresh all
     [self layoutWithAllItemWithResultItems:resultImageItem];

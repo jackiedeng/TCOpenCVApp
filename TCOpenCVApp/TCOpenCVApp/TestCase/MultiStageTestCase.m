@@ -44,6 +44,10 @@
     addWeighted(mask, 0.5, gray, 0.5, 0.0, gray);
     
     check(gray,@"half");
+    
+    Mat half = src(cv::Rect(0,0,100,100));
+    
+    check(half,@"part");
 }
 
 @end
