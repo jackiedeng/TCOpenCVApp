@@ -38,10 +38,12 @@
 }
 
 - (NSString* _Nonnull)displayText{
-    return [NSString stringWithFormat:@"%@ : %@",self.key,self.value];
+    return [NSString stringWithFormat:@"%@ : %@",self.title,self.value];
 }
     
 - (void)fillValueToDict:(NSMutableDictionary*)dict{
+    
+    self.value = [self getCurrentValue];
     
     if(self.value){
         
@@ -61,6 +63,7 @@
     CGRect rect = CGRectZero;
     rect.size.width = [UIScreen mainScreen].bounds.size.width;
     rect.size.height = height;
+    rect = CGRectInset(rect, 20, 0);
     return  rect;
 }
     
@@ -68,5 +71,9 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(opCvConfigItemDidUpdateValue:)]){
         [self.delegate opCvConfigItemDidUpdateValue:self];
     }
+}
+
+- (id)getCurrentValue{
+    return nil;
 }
 @end

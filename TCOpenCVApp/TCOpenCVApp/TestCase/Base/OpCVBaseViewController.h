@@ -11,11 +11,15 @@
 #import <opencv2/core/types.hpp>
 #import <opencv2/core/utility.hpp>
 #import <opencv2/imgproc/types_c.h>
+#import "SlideConfigItem.h"
+#import "SelectionConfigItem.h"
 
 using namespace std;
 using namespace cv;
 
-#define getValue(x,y) [self valueFromConfig:x config:y]
+#define getValue(k,c) [self valueFromConfig:k config:c]
+#define getFloatValue(k,c) [self floatValueFromConfig:k config:c]
+#define lhImg(x) [self leftHalfImage:x]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,7 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSArray*)controlItems;
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)configs;
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image;
-- (instancetype)valueFromConfig:(NSString*)key config:(NSDictionary*)config;
+- (Mat)leftHalfImage:(Mat)img;
+- (NSString*)valueFromConfig:(NSString*)key config:(NSDictionary*)config;
+- (float)floatValueFromConfig:(NSString*)key config:(NSDictionary*)config;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -49,11 +49,12 @@
     
     return slide;
 }
+
+- (id)getCurrentValue{
+    return [NSNumber numberWithFloat:[(UISlider*)[self itemView] value]];
+}
     
 - (void)onValueChange:(UISlider*)sender{
-    
-    self.value = [NSNumber numberWithFloat:sender.value];
-    
     [self setNeedUpdate];
 }
 

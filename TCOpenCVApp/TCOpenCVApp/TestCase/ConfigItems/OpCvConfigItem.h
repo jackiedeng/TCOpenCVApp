@@ -14,6 +14,7 @@
 @protocol OpCvConfigItemProtocol <NSObject>
 @required
 - (UIView* _Nonnull)createView:(NSDictionary* _Nonnull)config;
+- (id _Nullable)getCurrentValue;
 - (void)fillValueToDict:(NSMutableDictionary* _Nonnull)dict;
 @end
 

@@ -11,7 +11,7 @@
 
 @implementation CVTransparentTestCase
 - (NSString*)title{
-    return @"图片转换";
+    return @"图片叠加";
 }
 - (NSArray*)controlItems{
     return @[
@@ -23,12 +23,11 @@
 }
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)configs{
     
-    
-    float alpha = [(NSNumber*)getValue(@"alpha",configs) floatValue];
+    float alpha = getFloatValue(@"alpha",configs);
     
     Mat src = [self imageNamed:@"test.png"];
     
-    Mat bk = Mat(src.rows,src.cols,src.type(),Scalar(255,255,0));
+    Mat bk = Mat(src.rows,src.cols,src.type(),Scalar(255,255,0,255));
     
     addWeighted(src, alpha, bk, 1.0-alpha, 0.0, src);
     

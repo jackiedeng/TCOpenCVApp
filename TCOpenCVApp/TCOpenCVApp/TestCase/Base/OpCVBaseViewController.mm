@@ -161,7 +161,8 @@
     float height = rect.size.height + 5;
     
     for(UIView * view in _controlViews){
-        view.center = CGPointMake(0, height);
+        
+        view.center = CGPointMake((self.view.frame.size.width-view.frame.size.width)/2, height);
         height += view.frame.size.height;
     }
     
@@ -220,9 +221,25 @@
     return src;
 }
 
-- (instancetype)valueFromConfig:(NSString*)key
+- (NSString*)valueFromConfig:(NSString*)key
                          config:(NSDictionary*)config{
     
     return [config objectForKey:key];
+}
+
+- (float)floatValueFromConfig:(NSString*)key config:(NSDictionary*)config{
+    
+    id obj = [self valueFromConfig:key config:config];
+    
+    if([obj isKindOfClass:[NSNumber class]]){
+        return [obj floatValue];
+    }
+    
+    return 0;
+}
+
+- (Mat)leftHalfImage:(Mat)img{
+ 
+    return img(cv::Rect(0,0,img.size().width/2,img.size().height));
 }
 @end
