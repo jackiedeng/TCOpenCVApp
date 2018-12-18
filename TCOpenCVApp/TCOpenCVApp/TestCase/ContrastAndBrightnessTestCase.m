@@ -30,6 +30,7 @@
              
              ];
 }
+
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)config{
     
     float constrast = getFloatValue(@"constrast", config);

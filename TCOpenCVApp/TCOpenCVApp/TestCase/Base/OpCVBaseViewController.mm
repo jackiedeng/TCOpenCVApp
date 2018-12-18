@@ -8,7 +8,7 @@
 
 #import "OpCVBaseViewController.h"
 #import "SlideConfigItem.h"
-
+#import "OpResultImagePreview.h"
 
 @interface OpCVBaseViewController ()<OpCvConfigItemUpdateProtocol>
 {
@@ -16,9 +16,9 @@
     UIScrollView * _contentView;
     NSArray      * _controlItems;
     NSMutableArray  * _controlViews;
-    
-    UIImageView  * _targetImageView;
-    UILabel      * _targetLabel;
+    //保存上一次结果的items
+    NSArray      * _resultImageItems;
+    UILabel      * _mainLabel;
 }
 @end
 
@@ -106,17 +106,14 @@
     
     _contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     
-    _targetLabel = [UILabel new];
-    _targetLabel.layer.anchorPoint = CGPointZero;
-    [_contentView addSubview:_targetLabel];
-    _targetLabel.layer.zPosition = 1000;
-    _targetLabel.backgroundColor = [UIColor blackColor];
-    _targetLabel.font = [UIFont systemFontOfSize:16];
-    _targetLabel.textColor = [UIColor whiteColor];
+    _mainLabel = [UILabel new];
+    _mainLabel.layer.anchorPoint = CGPointZero;
+    [_contentView addSubview:_mainLabel];
+    _mainLabel.layer.zPosition = 1000;
+    _mainLabel.backgroundColor = [UIColor blackColor];
+    _mainLabel.font = [UIFont systemFontOfSize:16];
+    _mainLabel.textColor = [UIColor whiteColor];
     [_contentView setAlwaysBounceVertical:YES];
-    
-    _targetImageView = [UIImageView new];
-    [_contentView addSubview:_targetImageView];
     
     float height = 0;
     
@@ -146,55 +143,109 @@
     
 #pragma mark -
 #pragma mark main process
-- (void)layoutWithAllItem{
-    
-    [_targetImageView sizeToFit];
-    
-    CGRect rect = _targetImageView.frame;
-    
-    rect.size.height *=  (self.view.frame.size.width/rect.size.width);
-    
-    rect.size.width = self.view.frame.size.width;
+- (void)cleanLastResult{
+    if(_resultImageItems){
+        for(OpResultImageItem * item in _resultImageItems){
+            [item clean];
+        }
+    }
+}
 
-    _targetImageView.frame = rect;
-
-    float height = rect.size.height + 5;
+- (void)layoutWithAllItemWithResultItems:(NSArray*)resultItems{
     
+    [self cleanLastResult];
+    
+    float height =  20;
+    //layout new
+    for(OpResultImageItem * item in resultItems){
+       height = [item createDisplayViewToContentView:_contentView
+                                    withLayoutHeight:height];
+    }
+    //layout controls
+    height += 10;
     for(UIView * view in _controlViews){
-        
         view.center = CGPointMake((self.view.frame.size.width-view.frame.size.width)/2, height);
         height += view.frame.size.height;
     }
     
     [_contentView setContentSize:CGSizeMake(self.view.frame.size.width, height)];
+
+    //保存当前
+    _resultImageItems = resultItems;
 }
+
+#pragma mark -
+#pragma mark main process
+
+- (void)getMultiStageProcess:(NSDictionary*)config
+             resultItemArray:(NSMutableArray*)resultItemArray{
     
-- (void)updateTargetImage{
+    __block int stageCount = 1;
     
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    [self processImageWithConfigs:config
+                    stageImageSet:^(Mat img, NSString * _Nonnull label) {
+                        
+                        if(!img.empty()){
+                            
+                            label = [NSString stringWithFormat:@"%d.%@",stageCount++,label];
+                        
+                            [resultItemArray addObject:[OpResultImageItem
+                                                        itemWithImage:MatToUIImage(img)
+                                                        label:label]];
+                        }
+                    }];
     
-     for(OpCvConfigItem * item in _controlItems){
-         [item fillValueToDict:dict];
-     }
-    double t = (double)getTickCount();
+}
+
+- (void)getSingleResultProcess:(NSDictionary*)config
+               resultItemArray:(NSMutableArray*)resultItemArray{
     
-    cv::Mat resultMat = [self prcessImageWithConfigs:dict];
-    
-    t = ((double)getTickCount() - t)/getTickFrequency();
-    
-    _targetLabel.text = [NSString stringWithFormat:@"%@ cost:%.5f",[self title],t];
-    [_targetLabel sizeToFit];
+    cv::Mat resultMat = [self prcessImageWithConfigs:config];
     
     if(!resultMat.empty()){
         
-        UIImage * image = MatToUIImage(resultMat);
-        
-        [_targetImageView setImage:image];
-    
-        [self layoutWithAllItem];
-    }else{
-        NSLog(@"is empty!");
+        [resultItemArray addObject:[OpResultImageItem
+                                    itemWithImage:MatToUIImage(resultMat)
+                                    label:@"result"]];
     }
+}
+
+- (void)updateTargetImage{
+    
+    NSMutableDictionary * config = [NSMutableDictionary dictionary];
+    
+    NSMutableArray * resultImageItem = [NSMutableArray array];
+    
+     for(OpCvConfigItem * item in _controlItems){
+         [item fillValueToDict:config];
+     }
+    double t = (double)getTickCount();
+    
+    //根据处理流程选择
+    switch([self processType]){
+        case single_image:
+        {
+            [self getSingleResultProcess:config
+                         resultItemArray:resultImageItem];
+        }
+            break;
+        case multi_stage:
+        {
+            [self getMultiStageProcess:config
+                       resultItemArray:resultImageItem];
+        }
+            break;
+        default:
+            break;
+    }
+
+    t = ((double)getTickCount() - t)/getTickFrequency();
+    
+    _mainLabel.text = [NSString stringWithFormat:@"%@ cost:%.5f",[self title],t];
+    [_mainLabel sizeToFit];
+    
+    //fresh all
+    [self layoutWithAllItemWithResultItems:resultImageItem];
 }
 #pragma mark -
 #pragma mark deletate
@@ -212,6 +263,15 @@
     UIImageToMat(image, src);
     
     return src;
+}
+
+
+- (ProcessType)processType{
+    return single_image;
+}
+
+- (void)processImageWithConfigs:(NSDictionary*)configs
+                  stageImageSet:(void(^)(Mat img,NSString *label))block{
 }
 
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image{

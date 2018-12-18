@@ -14,8 +14,14 @@
 #import "SlideConfigItem.h"
 #import "SelectionConfigItem.h"
 
+
 using namespace std;
 using namespace cv;
+
+typedef enum{
+    single_image = 0,
+    multi_stage,
+}ProcessType;
 
 #define getValue(k,c) [self valueFromConfig:k config:c]
 #define getFloatValue(k,c) [self floatValueFromConfig:k config:c]
@@ -26,7 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OpCVBaseViewController : UIViewController
 - (NSString*)title;
 - (NSArray*)controlItems;
+//处理流程 处理单张还是多张 默认single_image
+- (ProcessType)processType;
+//单张图片处理
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)configs;
+//处理多张图片过程 用于显示处理过程过程中的图片
+- (void)processImageWithConfigs:(NSDictionary*)configs
+                stageImageSet:(void(^)(Mat img,NSString *label))check;
+
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image;
 - (Mat)leftHalfImage:(Mat)img;
 - (NSString*)valueFromConfig:(NSString*)key config:(NSDictionary*)config;

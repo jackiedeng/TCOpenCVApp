@@ -14,7 +14,8 @@ NSString * vcs[] = {
     @"CVTransparentTestCase",
     @"ContrastAndBrightnessTestCase",
     @"BaseDrawTestVase",
-    @"RandomDrawTestCase"
+    @"RandomDrawTestCase",
+    @"MultiStageTestCase"
 };
 
 
@@ -30,7 +31,7 @@ NSString * vcs[] = {
     
     [super viewDidLoad];
     NSLog(@"did load!!!!!");
-    self.navigationItem.title = @"opencv test case";
+    self.navigationItem.title = @"opencv lab";
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
     _testCtrs = [NSMutableArray<OpCVBaseViewController*> array];

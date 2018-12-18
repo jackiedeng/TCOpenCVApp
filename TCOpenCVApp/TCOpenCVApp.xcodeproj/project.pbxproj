@@ -13,6 +13,8 @@
 		8CF0652B21C898900020FD6D /* SelectionConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0652A21C898900020FD6D /* SelectionConfigItem.m */; };
 		8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0652D21C8B9B50020FD6D /* RandomDrawTestCase.m */; };
 		8D4F8FB4902ACCC1F15CCADB /* libPods-TCOpenCVApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F40B50505995D50DB4D435 /* libPods-TCOpenCVApp.a */; };
+		A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */; };
+		A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */; };
 		A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABB21C74CD4009F3693 /* AppDelegate.m */; };
 		A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABE21C74CD4009F3693 /* ViewController.m */; };
 		A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAC021C74CD4009F3693 /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 		8CF0652A21C898900020FD6D /* SelectionConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectionConfigItem.m; sourceTree = "<group>"; };
 		8CF0652C21C8B9B50020FD6D /* RandomDrawTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomDrawTestCase.h; sourceTree = "<group>"; };
 		8CF0652D21C8B9B50020FD6D /* RandomDrawTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RandomDrawTestCase.m; sourceTree = "<group>"; };
+		A1D68D1E21C8EC7B002F618F /* OpResultImagePreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpResultImagePreview.h; sourceTree = "<group>"; };
+		A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpResultImagePreview.m; sourceTree = "<group>"; };
+		A1D68D2121C8F3FC002F618F /* MultiStageTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiStageTestCase.h; sourceTree = "<group>"; };
+		A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiStageTestCase.m; sourceTree = "<group>"; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 				8CF0652721C895DB0020FD6D /* BaseDrawTestVase.mm */,
 				8CF0652C21C8B9B50020FD6D /* RandomDrawTestCase.h */,
 				8CF0652D21C8B9B50020FD6D /* RandomDrawTestCase.m */,
+				A1D68D2121C8F3FC002F618F /* MultiStageTestCase.h */,
+				A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -250,6 +258,8 @@
 			children = (
 				A1DECAF621C79CA2009F3693 /* OpCVBaseViewController.h */,
 				A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */,
+				A1D68D1E21C8EC7B002F618F /* OpResultImagePreview.h */,
+				A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -466,8 +476,10 @@
 				8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
 				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
+				A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
 				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
+				A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */,
 				8CF0652821C895DB0020FD6D /* BaseDrawTestVase.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
