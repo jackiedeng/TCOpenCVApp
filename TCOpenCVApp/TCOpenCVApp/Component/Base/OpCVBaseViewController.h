@@ -43,7 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)configs;
 //处理多张图片过程 用于显示处理过程过程中的图片
 - (void)processImageWithConfigs:(NSDictionary*)configs
-                  stageImageSet:(void(^)(Mat img,UIImage* ocImg,NSString *label))check;
+                  stageImageSet:(void(^)(Mat img,NSString *label))check
+                uiimageStageSet:(void(^)(UIImage* img,NSString *label))uiCheck;
+;
 
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image;
 - (Mat)leftHalfImage:(Mat)img;

@@ -187,17 +187,38 @@
     
     __block int stageCount = 1;
     
+    __block double t = (double)getTickCount();
+    
     [self processImageWithConfigs:config
-                    stageImageSet:^(Mat img,UIImage*ocimg,NSString * _Nonnull label) {
+                    stageImageSet:^(Mat img,NSString * _Nonnull label) {
                         
-                        if(!img.empty() || ocimg){
+                        double cost = ((double)getTickCount() - t)/getTickFrequency();
+                        t = (double)getTickCount();
+                        
+                        if(!img.empty()){
                             
-                            label = [NSString stringWithFormat:@"%d.%@",stageCount++,label];
+                            label = [NSString stringWithFormat:@"%d.%@ 耗时:%lf",stageCount++,label,cost];
                         
                             [resultItemArray addObject:[OpResultImageItem
-                                                        itemWithImage:ocimg?ocimg:MatToUIImage(img)
+                                                        itemWithImage:MatToUIImage(img)
                                                         label:label]];
                         }
+                        
+                    }
+                  uiimageStageSet:^(UIImage * _Nonnull img, NSString * _Nonnull label) {
+                      
+                      double cost = ((double)getTickCount() - t)/getTickFrequency();
+                      t = (double)getTickCount();
+                      
+                        if(img){
+                            
+                            label = [NSString stringWithFormat:@"%d.%@ 耗时:%lf",stageCount++,label,cost];
+                            
+                            [resultItemArray addObject:[OpResultImageItem
+                                                        itemWithImage:img
+                                                        label:label]];
+                        }
+                        
                     }];
     
 }
@@ -277,7 +298,8 @@
 }
 
 - (void)processImageWithConfigs:(NSDictionary*)configs
-                 stageImageSet:(void(^)(Mat img,UIImage* ocImg,NSString *label))check{
+                  stageImageSet:(void(^)(Mat img,NSString *label))check
+                uiimageStageSet:(void(^)(UIImage* img,NSString *label))uiCheck{
 }
 
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image{

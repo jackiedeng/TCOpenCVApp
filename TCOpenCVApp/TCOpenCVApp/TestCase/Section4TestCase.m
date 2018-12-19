@@ -27,14 +27,15 @@
 }
 
 - (void)processImageWithConfigs:(NSDictionary*)configs
-                  stageImageSet:(void(^)(Mat img,UIImage*ocimage,NSString *label))check{
+                  stageImageSet:(void(^)(Mat img,NSString *label))check
+                uiimageStageSet:(void(^)(UIImage* img,NSString *label))uiCheck{
     CV_TEST_CODE_BEGIN
     
     Mat src;
     
     Test1Mat(src);
     
-    check(src,nil,@"练习2 积分图（练习一打字一很无聊略过了）");
+    check(src,@"练习2 积分图（练习一打字一很无聊略过了）");
     
     Mat chanels = Mat::zeros(Size2i(10,10), CV_32FC1);
     
@@ -42,7 +43,7 @@
     
     rand.fill(chanels, RNG::UNIFORM, 1, 200);
     
-    check(Mat(),[CVUtil matNumberImage:chanels],@"单通道随机");
+    uiCheck([CVUtil matNumberImage:chanels],@"单通道随机");
 
     Mat resultMat = chanels.clone();
     resultMat.setTo(0);
@@ -58,7 +59,7 @@
         }
     }
     
-    check(Mat(),[CVUtil matNumberImage:resultMat],@"积分图");
+    uiCheck([CVUtil matNumberImage:resultMat],@"积分图");
     
     CV_TEST_CODE_END
 }
