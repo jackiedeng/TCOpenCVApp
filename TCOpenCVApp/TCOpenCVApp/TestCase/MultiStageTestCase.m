@@ -26,28 +26,34 @@
 }
 
 - (void)processImageWithConfigs:(NSDictionary*)configs
-                  stageImageSet:(void(^)(Mat img,NSString *label))check{
+                  stageImageSet:(void(^)(Mat img,UIImage*ocimage,NSString *label))check{
+    CV_TEST_CODE_BEGIN
     
     Mat src;
     
     UIImageToMat([UIImage imageNamed:@"test.png"],src);
     
-    check(src,@"orgin");
+    check(src,nil,@"orgin");
     
     Mat gray;
     cvtColor(src, gray, COLOR_RGB2GRAY);
     
-    check(gray,@"gary");
+    check(gray,nil,@"gary");
     
     Mat mask = Mat(gray.size(),gray.type(),Scalar(255));
     
     addWeighted(mask, 0.5, gray, 0.5, 0.0, gray);
     
-    check(gray,@"half");
+    check(gray,nil,@"half");
     
     Mat half = src(cv::Rect(0,0,100,100));
+    Ptr<Mat> p = makePtr<Mat>(half);
     
-    check(half,@"part");
+    [NSValue valueWithPointer:p];
+    
+    check(half,nil,@"part");
+    
+    CV_TEST_CODE_END
 }
 
 @end

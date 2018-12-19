@@ -188,14 +188,14 @@
     __block int stageCount = 1;
     
     [self processImageWithConfigs:config
-                    stageImageSet:^(Mat img, NSString * _Nonnull label) {
+                    stageImageSet:^(Mat img,UIImage*ocimg,NSString * _Nonnull label) {
                         
-                        if(!img.empty()){
+                        if(!img.empty() || ocimg){
                             
                             label = [NSString stringWithFormat:@"%d.%@",stageCount++,label];
                         
                             [resultItemArray addObject:[OpResultImageItem
-                                                        itemWithImage:MatToUIImage(img)
+                                                        itemWithImage:ocimg?ocimg:MatToUIImage(img)
                                                         label:label]];
                         }
                     }];
@@ -277,7 +277,7 @@
 }
 
 - (void)processImageWithConfigs:(NSDictionary*)configs
-                  stageImageSet:(void(^)(Mat img,NSString *label))block{
+                 stageImageSet:(void(^)(Mat img,UIImage* ocImg,NSString *label))check{
 }
 
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image{

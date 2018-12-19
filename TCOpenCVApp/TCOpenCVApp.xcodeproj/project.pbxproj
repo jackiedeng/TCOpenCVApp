@@ -16,6 +16,8 @@
 		A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D1F21C8EC7B002F618F /* OpResultImagePreview.m */; };
 		A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */; };
 		A1D68D2621C90F13002F618F /* testcase.info in Resources */ = {isa = PBXBuildFile; fileRef = A1D68D2521C90F13002F618F /* testcase.info */; };
+		A1D68D2A21CA2017002F618F /* Section5TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2921CA2017002F618F /* Section5TestCase.m */; };
+		A1D68D2D21CA2334002F618F /* Section4TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2C21CA2334002F618F /* Section4TestCase.m */; };
 		A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABB21C74CD4009F3693 /* AppDelegate.m */; };
 		A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABE21C74CD4009F3693 /* ViewController.m */; };
 		A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAC021C74CD4009F3693 /* Main.storyboard */; };
@@ -70,6 +72,10 @@
 		A1D68D2121C8F3FC002F618F /* MultiStageTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiStageTestCase.h; sourceTree = "<group>"; };
 		A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiStageTestCase.m; sourceTree = "<group>"; };
 		A1D68D2521C90F13002F618F /* testcase.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testcase.info; sourceTree = SOURCE_ROOT; };
+		A1D68D2821CA2017002F618F /* Section5TestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section5TestCase.h; sourceTree = "<group>"; };
+		A1D68D2921CA2017002F618F /* Section5TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Section5TestCase.m; sourceTree = "<group>"; };
+		A1D68D2B21CA2334002F618F /* Section4TestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section4TestCase.h; sourceTree = "<group>"; };
+		A1D68D2C21CA2334002F618F /* Section4TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Section4TestCase.m; sourceTree = "<group>"; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -247,6 +253,10 @@
 				8CF0652D21C8B9B50020FD6D /* RandomDrawTestCase.m */,
 				A1D68D2121C8F3FC002F618F /* MultiStageTestCase.h */,
 				A1D68D2221C8F3FC002F618F /* MultiStageTestCase.m */,
+				A1D68D2821CA2017002F618F /* Section5TestCase.h */,
+				A1D68D2921CA2017002F618F /* Section5TestCase.m */,
+				A1D68D2B21CA2334002F618F /* Section4TestCase.h */,
+				A1D68D2C21CA2334002F618F /* Section4TestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -500,6 +510,7 @@
 			files = (
 				A1DECAEE21C74FC5009F3693 /* OpenCVTool.mm in Sources */,
 				8CF0652B21C898900020FD6D /* SelectionConfigItem.m in Sources */,
+				A1D68D2D21CA2334002F618F /* Section4TestCase.m in Sources */,
 				AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */,
 				A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */,
 				A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */,
@@ -509,6 +520,7 @@
 				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
 				A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
+				A1D68D2A21CA2017002F618F /* Section5TestCase.m in Sources */,
 				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
 				A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */,
 				8CF0652821C895DB0020FD6D /* BaseDrawTestVase.mm in Sources */,

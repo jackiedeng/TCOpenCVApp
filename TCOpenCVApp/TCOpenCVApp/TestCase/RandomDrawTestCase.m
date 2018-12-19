@@ -24,6 +24,9 @@
              
              ];
 }
+
+CV_TEST_CODE_BEGIN
+
 - (cv::Mat)prcessImageWithConfigs:(NSDictionary*)config{
     
     Mat src = [self imageNamed:@"test.png"];
@@ -64,4 +67,5 @@
     return 0;
 }
 
+CV_TEST_CODE_END
 @end
