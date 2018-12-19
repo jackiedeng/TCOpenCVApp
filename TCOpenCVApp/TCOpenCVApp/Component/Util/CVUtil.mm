@@ -6,14 +6,14 @@
 //  Copyright © 2018 jackiedeng. All rights reserved.
 //
 
-#import "OpenCVTool.h"
+#import "CVUtil.h"
 #import <opencv2/imgcodecs/ios.h>
 #import <opencv2/core/types.hpp>
 #import <opencv2/imgproc/types_c.h>
 using namespace std;
 using namespace cv;
 
-@implementation OpenCVTool
+@implementation CVUtil
 
 + (UIImage*)test{
     

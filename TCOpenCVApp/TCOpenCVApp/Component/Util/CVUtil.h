@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define Test1Mat(x) UIImageToMat([UIImage imageNamed:@"test.png"], x)
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OpenCVTool : NSObject
+@interface CVUtil : NSObject
 + (UIImage*)test;
 @end
 

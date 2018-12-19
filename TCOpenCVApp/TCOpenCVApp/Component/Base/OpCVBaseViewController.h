@@ -13,7 +13,7 @@
 #import <opencv2/imgproc/types_c.h>
 #import "SlideConfigItem.h"
 #import "SelectionConfigItem.h"
-
+#import "CVUtil.h"
 
 using namespace std;
 using namespace cv;

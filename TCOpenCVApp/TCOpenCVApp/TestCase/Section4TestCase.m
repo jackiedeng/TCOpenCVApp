@@ -30,12 +30,19 @@
                   stageImageSet:(void(^)(Mat img,UIImage*ocimage,NSString *label))check{
     CV_TEST_CODE_BEGIN
     
-    Mat src = Mat();
-    src.zeros(500, 500, CV_8UC1);
+    Mat src;
+    
+    Test1Mat(src);
     
     check(src,nil,@"练习2 积分图（练习一打字一很无聊略过了）");
     
+    Mat chanels[4];
     
+    split(src, chanels);
+    
+    check(chanels[0],nil,@"0通道");
+    check(chanels[1],nil,@"1通道");
+    check(chanels[2],nil,@"2通道");
     
     CV_TEST_CODE_END
 }

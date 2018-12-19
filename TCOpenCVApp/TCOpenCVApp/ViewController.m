@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "OpenCVTool.h"
+#import "CVUtil.h"
 #import "OpCVBaseViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
