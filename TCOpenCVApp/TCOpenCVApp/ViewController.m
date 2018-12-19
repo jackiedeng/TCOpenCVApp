@@ -85,7 +85,7 @@ forCellReuseIdentifier:@"cell"];
     
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [[_testCtrs objectAtIndex:indexPath.row] title];
+    cell.textLabel.text =[NSString stringWithFormat:@"%ld. %@",indexPath.row+1,[[_testCtrs objectAtIndex:indexPath.row] title]];
 
     return  cell;
     
