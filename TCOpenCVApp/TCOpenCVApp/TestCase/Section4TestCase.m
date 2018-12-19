@@ -36,13 +36,29 @@
     
     check(src,nil,@"练习2 积分图（练习一打字一很无聊略过了）");
     
-    Mat chanels[4];
+    Mat chanels = Mat::zeros(Size2i(10,10), CV_32FC1);
     
-    split(src, chanels);
+    RNG rand = RNG(1);
     
-    check(chanels[0],nil,@"0通道");
-    check(chanels[1],nil,@"1通道");
-    check(chanels[2],nil,@"2通道");
+    rand.fill(chanels, RNG::UNIFORM, 1, 200);
+    
+    check(Mat(),[CVUtil matNumberImage:chanels],@"单通道随机");
+
+    Mat resultMat = chanels.clone();
+    resultMat.setTo(0);
+//    cout<<sumMat<<endl;
+    //计算积分图
+    for(int row = 0; row < chanels.rows; row++){
+        
+        for(int col =0 ;col < chanels.cols; col++){
+            
+            Mat subMat = chanels(Rect2i(0,0,row+1,col+1));
+            Scalar a = cv::sum(subMat);
+            resultMat.at<float>(col,row) = a[0];
+        }
+    }
+    
+    check(Mat(),[CVUtil matNumberImage:resultMat],@"积分图");
     
     CV_TEST_CODE_END
 }
