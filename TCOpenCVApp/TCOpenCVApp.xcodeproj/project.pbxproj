@@ -75,7 +75,7 @@
 		A1D68D3021CA2658002F618F /* Section4TestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section4TestCase.h; sourceTree = "<group>"; };
 		A1D68D3121CA2658002F618F /* Section5TestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section5TestCase.m; sourceTree = "<group>"; };
 		A1D68D3221CA2658002F618F /* Section5TestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section5TestCase.h; sourceTree = "<group>"; };
-		A1D68D3621CA27E4002F618F /* testcase.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testcase.info; path = TCOpenCVApp/testcase.info; sourceTree = SOURCE_ROOT; };
+		A1D68D3621CA27E4002F618F /* testcase.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testcase.info; sourceTree = SOURCE_ROOT; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };

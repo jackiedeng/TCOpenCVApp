@@ -38,7 +38,7 @@
     
     Mat chanels = Mat::zeros(Size2i(10,10), CV_32FC1);
     
-    RNG rand = RNG(1);
+    RNG rand = RNG(cv::getTickCount());
     
     rand.fill(chanels, RNG::UNIFORM, 1, 200);
     
