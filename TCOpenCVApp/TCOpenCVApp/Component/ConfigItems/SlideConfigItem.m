@@ -9,6 +9,7 @@
 #import "SlideConfigItem.h"
 
 #define rangeKey @"rangeKey"
+#define continueKey @"continueKey"
 #define defaultValueKey @"defaultValueKey"
 
 @implementation SlideConfigItem
@@ -18,6 +19,20 @@
                               range:(NSRange)range
                        defaultValue:(float)defaultvalue{
     
+    return [SlideConfigItem slideConfigWithTitle:title
+                                             key:key
+                                           range:range
+                                      isContinue:YES
+                                    defaultValue:defaultvalue];
+   
+}
+
++ (instancetype)slideConfigWithTitle:(NSString* _Nonnull)title
+                                 key:(NSString* _Nonnull) key
+                               range:(NSRange)range
+                          isContinue:(BOOL)isContinue
+                        defaultValue:(float)defaultvalue{
+    
     SlideConfigItem * newItem = [[SlideConfigItem alloc] initWithTitle:title
                                                                    key:key
                                                                 Config:^(NSMutableDictionary * _Nonnull dict) {
@@ -26,10 +41,13 @@
                                                                              forKey:rangeKey];
                                                                     [dict setObject:[NSNumber numberWithFloat:defaultvalue]
                                                                              forKey:defaultValueKey];
+                                                                    [dict setObject:[NSNumber numberWithBool:isContinue]
+                                                                             forKey:continueKey];
                                                                 }];
     newItem.value = [NSNumber numberWithFloat:defaultvalue];
     
     return newItem;
+    
 }
     
 - (UIView* _Nonnull)createView:(NSDictionary* _Nonnull)config{
@@ -42,7 +60,8 @@
     [slide setMinimumValue:range.location];
     [slide setMaximumValue:range.location+range.length];
     [slide setValue:defaultValue];
-    
+//    [slide setContinuous:[[config objectForKey:continueKey] boolValue]];
+
     [slide addTarget:self
               action:@selector(onValueChange:)
     forControlEvents:UIControlEventValueChanged];

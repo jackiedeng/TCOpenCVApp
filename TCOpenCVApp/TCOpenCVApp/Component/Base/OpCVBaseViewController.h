@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 ;
 
 - (cv::Mat)imageNamed:(NSString*_Nonnull)image;
-- (Mat)leftHalfImage:(Mat)img;
+
 - (NSString*)valueFromConfig:(NSString*)key config:(NSDictionary*)config;
 - (float)floatValueFromConfig:(NSString*)key config:(NSDictionary*)config;
 @end

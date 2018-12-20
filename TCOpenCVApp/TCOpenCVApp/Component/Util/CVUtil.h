@@ -15,6 +15,8 @@ using namespace std;
 using namespace cv;
 
 #define Test1Mat(x) UIImageToMat([UIImage imageNamed:@"test.png"], x)
+#define HalfMat(x) [CVUtil leftHalfImage:x]
+#define HalfMatBack(x,y) [CVUtil halfImageBackToOrgin:x half:y]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)test;
 //显示mat数字的图像
 + (UIImage*)matNumberImage:(Mat)mat;
++ (Mat)leftHalfImage:(Mat)img;
++ (Mat)halfImageBackToOrgin:(Mat)orgin half:(Mat)half;
 @end
 
 NS_ASSUME_NONNULL_END

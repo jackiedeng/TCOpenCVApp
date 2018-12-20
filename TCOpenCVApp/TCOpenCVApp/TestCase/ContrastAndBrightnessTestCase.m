@@ -38,7 +38,7 @@
     
     Mat src = [self imageNamed:@"test.png"];
     
-    Mat process = lhImg(src);
+    Mat process = HalfMat(src);
     
     process.convertTo(process, -1,constrast,brightness);
     

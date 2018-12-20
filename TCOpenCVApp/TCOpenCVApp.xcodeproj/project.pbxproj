@@ -31,6 +31,11 @@
 		A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */; };
 		A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */; };
 		A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */; };
+		AE08CA4E21CB6A3A0036B253 /* Section10TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA4D21CB6A3A0036B253 /* Section10TestCase.m */; };
+		AE08CA5121CB7F960036B253 /* BilateralFilterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5021CB7F960036B253 /* BilateralFilterTestCase.m */; };
+		AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5321CB852E0036B253 /* SobelTestCase.m */; };
+		AE08CA5721CB8E750036B253 /* LaplacianTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5621CB8E750036B253 /* LaplacianTestCase.m */; };
+		AE08CA5A21CB90B60036B253 /* ImageMorphologicalTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5921CB90B60036B253 /* ImageMorphologicalTestCase.m */; };
 		AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */; };
 		FB87D3CC37E3F14772A5FD48 /* libPods-TCOpenCVAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789F80FC93ECDE984DDA10F /* libPods-TCOpenCVAppTests.a */; };
 /* End PBXBuildFile section */
@@ -104,6 +109,16 @@
 		A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideConfigItem.m; sourceTree = "<group>"; };
 		A5F40B50505995D50DB4D435 /* libPods-TCOpenCVApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCOpenCVApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BE8D49A7169B1BB7389977 /* Pods-TCOpenCVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.release.xcconfig"; sourceTree = "<group>"; };
+		AE08CA4C21CB6A3A0036B253 /* Section10TestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section10TestCase.h; sourceTree = "<group>"; };
+		AE08CA4D21CB6A3A0036B253 /* Section10TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Section10TestCase.m; sourceTree = "<group>"; };
+		AE08CA4F21CB7F960036B253 /* BilateralFilterTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilateralFilterTestCase.h; sourceTree = "<group>"; };
+		AE08CA5021CB7F960036B253 /* BilateralFilterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BilateralFilterTestCase.m; sourceTree = "<group>"; };
+		AE08CA5221CB852E0036B253 /* SobelTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SobelTestCase.h; sourceTree = "<group>"; };
+		AE08CA5321CB852E0036B253 /* SobelTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SobelTestCase.m; sourceTree = "<group>"; };
+		AE08CA5521CB8E750036B253 /* LaplacianTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaplacianTestCase.h; sourceTree = "<group>"; };
+		AE08CA5621CB8E750036B253 /* LaplacianTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaplacianTestCase.m; sourceTree = "<group>"; };
+		AE08CA5821CB90B60036B253 /* ImageMorphologicalTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMorphologicalTestCase.h; sourceTree = "<group>"; };
+		AE08CA5921CB90B60036B253 /* ImageMorphologicalTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageMorphologicalTestCase.m; sourceTree = "<group>"; };
 		AE43CE1621C7D80500CD64D5 /* CVTransparentTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVTransparentTestCase.h; sourceTree = "<group>"; };
 		AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CVTransparentTestCase.mm; sourceTree = "<group>"; };
 		AFB4502B38EBA744E25207D2 /* Pods-TCOpenCVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +280,16 @@
 				A1D68D2F21CA2657002F618F /* Section4TestCase.m */,
 				A1D68D3221CA2658002F618F /* Section5TestCase.h */,
 				A1D68D3121CA2658002F618F /* Section5TestCase.m */,
+				AE08CA4C21CB6A3A0036B253 /* Section10TestCase.h */,
+				AE08CA4D21CB6A3A0036B253 /* Section10TestCase.m */,
+				AE08CA4F21CB7F960036B253 /* BilateralFilterTestCase.h */,
+				AE08CA5021CB7F960036B253 /* BilateralFilterTestCase.m */,
+				AE08CA5221CB852E0036B253 /* SobelTestCase.h */,
+				AE08CA5321CB852E0036B253 /* SobelTestCase.m */,
+				AE08CA5521CB8E750036B253 /* LaplacianTestCase.h */,
+				AE08CA5621CB8E750036B253 /* LaplacianTestCase.m */,
+				AE08CA5821CB90B60036B253 /* ImageMorphologicalTestCase.h */,
+				AE08CA5921CB90B60036B253 /* ImageMorphologicalTestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -516,18 +541,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE08CA5A21CB90B60036B253 /* ImageMorphologicalTestCase.m in Sources */,
 				A1DECAEE21C74FC5009F3693 /* CVUtil.mm in Sources */,
 				8CF0652B21C898900020FD6D /* SelectionConfigItem.m in Sources */,
 				AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */,
+				AE08CA5721CB8E750036B253 /* LaplacianTestCase.m in Sources */,
 				A1D68D3421CA2658002F618F /* Section5TestCase.m in Sources */,
 				A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */,
 				A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */,
+				AE08CA5121CB7F960036B253 /* BilateralFilterTestCase.m in Sources */,
+				AE08CA4E21CB6A3A0036B253 /* Section10TestCase.m in Sources */,
 				8CF0652521C88E4B0020FD6D /* ContrastAndBrightnessTestCase.m in Sources */,
 				8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
 				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
 				A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */,
 				A1D68D3321CA2658002F618F /* Section4TestCase.m in Sources */,
+				AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
 				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
 				A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */,

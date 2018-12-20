@@ -326,8 +326,5 @@
     return 0;
 }
 
-- (Mat)leftHalfImage:(Mat)img{
- 
-    return img(cv::Rect(0,0,img.size().width/2,img.size().height));
-}
+
 @end

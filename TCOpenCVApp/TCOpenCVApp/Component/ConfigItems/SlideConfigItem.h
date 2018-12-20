@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
                                 key:(NSString* _Nonnull) key
                               range:(NSRange)range
                        defaultValue:(float)defaultvalue;
+
++ (instancetype)slideConfigWithTitle:(NSString* _Nonnull)title
+                                 key:(NSString* _Nonnull) key
+                               range:(NSRange)range
+                          isContinue:(BOOL)isContinue
+                        defaultValue:(float)defaultvalue;
 @end
 
 NS_ASSUME_NONNULL_END

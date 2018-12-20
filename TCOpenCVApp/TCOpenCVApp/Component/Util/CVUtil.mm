@@ -88,5 +88,21 @@
     cout<<"use time:"<<t;
     return MatToUIImage(d);
 }
+
++ (Mat)leftHalfImage:(Mat)img{
     
+    return img(cv::Rect(0,0,img.size().width/2,img.size().height)).clone();
+}
+
++ (Mat)halfImageBackToOrgin:(Mat)orgin half:(Mat)half{
+    
+    Mat newOrgin = orgin.clone();
+    
+    Mat right = newOrgin(cv::Rect(half.size().width,0,half.size().width,half.size().height));
+    
+//    right.setTo(half);
+    cv::addWeighted(right, 0, half, 1, 0, right);
+    
+    return newOrgin;
+}
 @end
