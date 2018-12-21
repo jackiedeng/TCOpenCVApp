@@ -65,4 +65,60 @@
     
     return newOrgin;
 }
+
++ (Mat)drawHistmap:(Mat*)histMap length:(int)length{
+    
+    int height = 150;
+    int width = 255;
+    int border = 10;
+    
+    Mat map = Mat::zeros(cv::Size(width,height), CV_8UC4);
+    
+    cv::copyMakeBorder(map, map, border, border, border, border, cv::BORDER_DEFAULT);
+    
+    Scalar color[3] = {
+        Scalar(255,0,0,100),
+        Scalar(0,255,0,100),
+        Scalar(0,0,255,100)
+    };
+    
+    for(int index = 0; index < length; index++){
+
+        double max,min;
+        cv::minMaxLoc(histMap[index], &min,&max);
+        
+        for(int i = 0; i < histMap[index].size().height; i++){
+            
+    //        int value = histMap.at<float>(i);
+            cv::line(map, cv::Point(border+i,height*0.9+border), cv::Point(i+border,(1.0-histMap[index].at<float>(i,0)/max)*height*0.9+border), color[index%3]);
+            
+    //        cout << i <<":"<<histMap.at<float>(i,0)<<endl;
+        }
+        
+    }
+    return map;
+}
+
++ (Mat)drawHistmapByImage:(Mat)orgin{
+    
+    int chanels[1] ={0};
+    int histSize[] = { 256 };
+    float midRanges[] = { 0, 256 };
+    const float *range[] = {midRanges};
+    
+    if(orgin.channels() >=4){
+        cv::cvtColor(orgin, orgin, CV_RGBA2RGB);
+    }
+    
+    Mat * chanelArray = new Mat[orgin.channels()];
+    cv::split(orgin, chanelArray);
+    
+    Mat * histMapArray = new Mat[orgin.channels()];
+    
+    for(int i = 0; i < orgin.channels(); i++){
+        cv::calcHist(&chanelArray[i],1, chanels, Mat(), histMapArray[i],1, histSize, range);
+    }
+
+    return [CVUtil drawHistmap:histMapArray length:orgin.channels()];
+}
 @end

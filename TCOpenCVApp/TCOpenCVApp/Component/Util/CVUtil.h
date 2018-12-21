@@ -18,6 +18,7 @@ using namespace cv;
 #define MatFromImage(x,y) UIImageToMat([UIImage imageNamed:x], y)
 #define HalfMat(x) [CVUtil leftHalfImage:x]
 #define HalfMatBack(x,y) [CVUtil halfImageBackToOrgin:x half:y]
+#define HistMap(x) [CVUtil drawHistmapByImage:x]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)matNumberImage:(Mat)mat;
 + (Mat)leftHalfImage:(Mat)img;
 + (Mat)halfImageBackToOrgin:(Mat)orgin half:(Mat)half;
++ (Mat)drawHistmap:(Mat*)histMap;
++ (Mat)drawHistmapByImage:(Mat)origin;
 @end
 
 NS_ASSUME_NONNULL_END
