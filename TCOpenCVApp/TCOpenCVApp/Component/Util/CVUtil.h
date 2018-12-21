@@ -14,14 +14,15 @@
 using namespace std;
 using namespace cv;
 
-#define Test1Mat(x) UIImageToMat([UIImage imageNamed:@"test.png"], x)
+#define Test1Mat(x) UIImageToMat([CVUtil testImage], x)
+#define MatFromImage(x,y) UIImageToMat([UIImage imageNamed:x], y)
 #define HalfMat(x) [CVUtil leftHalfImage:x]
 #define HalfMatBack(x,y) [CVUtil halfImageBackToOrgin:x half:y]
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CVUtil : NSObject
-+ (UIImage*)test;
++ (UIImage*)testImage;
 //显示mat数字的图像
 + (UIImage*)matNumberImage:(Mat)mat;
 + (Mat)leftHalfImage:(Mat)img;
