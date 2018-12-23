@@ -13,6 +13,7 @@
 #import <opencv2/imgproc/types_c.h>
 #import "SlideConfigItem.h"
 #import "SelectionConfigItem.h"
+#import "DrawMaskConfigItem.h"
 #import "CVUtil.h"
 
 using namespace std;
@@ -32,7 +33,7 @@ typedef enum{
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OpCVBaseViewController : UIViewController
+@interface OpCVBaseViewController : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 //所有测试
 
 - (NSString*)title;

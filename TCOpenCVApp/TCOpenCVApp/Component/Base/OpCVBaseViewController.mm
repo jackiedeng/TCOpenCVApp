@@ -24,6 +24,9 @@
 
 @implementation OpCVBaseViewController
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +37,17 @@
     _controlItems = [self controlItems];
     [self createControls];
     [self updateTargetImage];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onScrollNotification:)
+                                                 name:@"scrollControlNotification"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onGetImageFromAlbumNotification:)
+                                                 name:@"getImageFromAlbumNotification"
+                                               object:nil];
 }
     
 
@@ -144,6 +158,46 @@
     _contentView.frame = self.view.bounds;
     
     _mainLabel.center = CGPointMake(self.view.frame.size.width/2, 0);
+}
+#pragma mark -
+#pragma mark scroll notification
+- (void)onScrollNotification:(NSNotification*)notification{
+     [_contentView setScrollEnabled:![notification.object boolValue]];
+}
+
+- (void)onGetImageFromAlbumNotification:(NSNotification*)notification{
+    
+    UIImagePickerController * picker = [UIImagePickerController new];
+    
+    picker.allowsEditing = YES;
+    picker.delegate = self;
+    
+    [self.navigationController presentViewController:picker
+                                            animated:YES
+                                          completion:^{
+                                              
+                                          }];
+}
+#pragma mark -
+#pragma mark image get
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info{
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onGetAlbumImageBackNotification"
+                                                        object:[info objectForKey:UIImagePickerControllerEditedImage]
+                                                      userInfo:nil];
+    
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                                   
+                               }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                                   
+                               }];
 }
     
 #pragma mark -

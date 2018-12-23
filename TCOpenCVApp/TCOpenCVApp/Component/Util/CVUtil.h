@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage*)matNumberImage:(Mat)mat;
 + (Mat)leftHalfImage:(Mat)img;
 + (Mat)halfImageBackToOrgin:(Mat)orgin half:(Mat)half;
-+ (Mat)drawHistmap:(Mat*)histMap;
+//+ (Mat)drawHistmap:(Mat*)histMap;
 + (Mat)drawHistmapByImage:(Mat)origin;
 @end
 

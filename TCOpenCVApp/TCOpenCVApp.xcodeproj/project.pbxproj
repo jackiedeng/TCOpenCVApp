@@ -31,11 +31,21 @@
 		A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAF721C79CA2009F3693 /* OpCVBaseViewController.mm */; };
 		A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */; };
 		A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */; };
+		AE01782B21CE0ED400EB9E87 /* CannyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE01782A21CE0ED400EB9E87 /* CannyTestCase.m */; };
+		AE01783121CE28EB00EB9E87 /* ImageCutTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE01783021CE28EB00EB9E87 /* ImageCutTestCase.m */; };
+		AE01783421CE2EAF00EB9E87 /* DrawMaskConfigItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AE01783321CE2EAF00EB9E87 /* DrawMaskConfigItem.m */; };
+		AE01783721CE301300EB9E87 /* WatershedTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE01783621CE301300EB9E87 /* WatershedTestCase.m */; };
+		AE01783921CE48F800EB9E87 /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = AE01783821CE48F800EB9E87 /* test3.png */; };
 		AE08CA4E21CB6A3A0036B253 /* Section10TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA4D21CB6A3A0036B253 /* Section10TestCase.m */; };
 		AE08CA5121CB7F960036B253 /* BilateralFilterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5021CB7F960036B253 /* BilateralFilterTestCase.m */; };
 		AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5321CB852E0036B253 /* SobelTestCase.m */; };
 		AE08CA5721CB8E750036B253 /* LaplacianTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5621CB8E750036B253 /* LaplacianTestCase.m */; };
 		AE08CA5A21CB90B60036B253 /* ImageMorphologicalTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE08CA5921CB90B60036B253 /* ImageMorphologicalTestCase.m */; };
+		AE30FC5621CF52180016106C /* test4.png in Resources */ = {isa = PBXBuildFile; fileRef = AE30FC5521CF52180016106C /* test4.png */; };
+		AE30FC5921CF70BB0016106C /* GrabCutTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC5821CF70BB0016106C /* GrabCutTestCase.m */; };
+		AE30FC5D21CF711E0016106C /* DrawMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC5C21CF711E0016106C /* DrawMaskView.m */; };
+		AE30FC6021CF72060016106C /* DrawRectMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC5F21CF72060016106C /* DrawRectMaskView.m */; };
+		AE30FC6321CF82670016106C /* MeanShiftTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC6221CF82670016106C /* MeanShiftTestCase.m */; };
 		AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */; };
 		AEE95F7421CCB71900D89CD4 /* HighLightFixTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE95F7321CCB71900D89CD4 /* HighLightFixTestCase.m */; };
 		AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */; };
@@ -119,6 +129,15 @@
 		A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideConfigItem.m; sourceTree = "<group>"; };
 		A5F40B50505995D50DB4D435 /* libPods-TCOpenCVApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCOpenCVApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BE8D49A7169B1BB7389977 /* Pods-TCOpenCVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.release.xcconfig"; sourceTree = "<group>"; };
+		AE01782921CE0ED400EB9E87 /* CannyTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CannyTestCase.h; sourceTree = "<group>"; };
+		AE01782A21CE0ED400EB9E87 /* CannyTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CannyTestCase.m; sourceTree = "<group>"; };
+		AE01782F21CE28EB00EB9E87 /* ImageCutTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCutTestCase.h; sourceTree = "<group>"; };
+		AE01783021CE28EB00EB9E87 /* ImageCutTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCutTestCase.m; sourceTree = "<group>"; };
+		AE01783221CE2EAF00EB9E87 /* DrawMaskConfigItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMaskConfigItem.h; sourceTree = "<group>"; };
+		AE01783321CE2EAF00EB9E87 /* DrawMaskConfigItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMaskConfigItem.m; sourceTree = "<group>"; };
+		AE01783521CE301300EB9E87 /* WatershedTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatershedTestCase.h; sourceTree = "<group>"; };
+		AE01783621CE301300EB9E87 /* WatershedTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatershedTestCase.m; sourceTree = "<group>"; };
+		AE01783821CE48F800EB9E87 /* test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.png; sourceTree = "<group>"; };
 		AE08CA4C21CB6A3A0036B253 /* Section10TestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Section10TestCase.h; sourceTree = "<group>"; };
 		AE08CA4D21CB6A3A0036B253 /* Section10TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Section10TestCase.m; sourceTree = "<group>"; };
 		AE08CA4F21CB7F960036B253 /* BilateralFilterTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilateralFilterTestCase.h; sourceTree = "<group>"; };
@@ -129,6 +148,15 @@
 		AE08CA5621CB8E750036B253 /* LaplacianTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaplacianTestCase.m; sourceTree = "<group>"; };
 		AE08CA5821CB90B60036B253 /* ImageMorphologicalTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMorphologicalTestCase.h; sourceTree = "<group>"; };
 		AE08CA5921CB90B60036B253 /* ImageMorphologicalTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageMorphologicalTestCase.m; sourceTree = "<group>"; };
+		AE30FC5521CF52180016106C /* test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test4.png; sourceTree = "<group>"; };
+		AE30FC5721CF70BB0016106C /* GrabCutTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrabCutTestCase.h; sourceTree = "<group>"; };
+		AE30FC5821CF70BB0016106C /* GrabCutTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrabCutTestCase.m; sourceTree = "<group>"; };
+		AE30FC5B21CF711E0016106C /* DrawMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMaskView.h; sourceTree = "<group>"; };
+		AE30FC5C21CF711E0016106C /* DrawMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMaskView.m; sourceTree = "<group>"; };
+		AE30FC5E21CF72060016106C /* DrawRectMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawRectMaskView.h; sourceTree = "<group>"; };
+		AE30FC5F21CF72060016106C /* DrawRectMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawRectMaskView.m; sourceTree = "<group>"; };
+		AE30FC6121CF82670016106C /* MeanShiftTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeanShiftTestCase.h; sourceTree = "<group>"; };
+		AE30FC6221CF82670016106C /* MeanShiftTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeanShiftTestCase.m; sourceTree = "<group>"; };
 		AE43CE1621C7D80500CD64D5 /* CVTransparentTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVTransparentTestCase.h; sourceTree = "<group>"; };
 		AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CVTransparentTestCase.mm; sourceTree = "<group>"; };
 		AEE95F7221CCB71900D89CD4 /* HighLightFixTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighLightFixTestCase.h; sourceTree = "<group>"; };
@@ -282,6 +310,8 @@
 		A1DECAF221C754D5009F3693 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AE01783821CE48F800EB9E87 /* test3.png */,
+				AE30FC5521CF52180016106C /* test4.png */,
 				AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */,
 				AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */,
 				AEE95F7921CCCBEA00D89CD4 /* 10s6t_2.png */,
@@ -328,6 +358,16 @@
 				AEE95F7C21CCD2B500D89CD4 /* MaskTestCase.m */,
 				AEE95F7E21CCE07200D89CD4 /* ImageTransformTestCase.h */,
 				AEE95F7F21CCE07200D89CD4 /* ImageTransformTestCase.m */,
+				AE01782921CE0ED400EB9E87 /* CannyTestCase.h */,
+				AE01782A21CE0ED400EB9E87 /* CannyTestCase.m */,
+				AE01782F21CE28EB00EB9E87 /* ImageCutTestCase.h */,
+				AE01783021CE28EB00EB9E87 /* ImageCutTestCase.m */,
+				AE01783521CE301300EB9E87 /* WatershedTestCase.h */,
+				AE01783621CE301300EB9E87 /* WatershedTestCase.m */,
+				AE30FC5721CF70BB0016106C /* GrabCutTestCase.h */,
+				AE30FC5821CF70BB0016106C /* GrabCutTestCase.m */,
+				AE30FC6121CF82670016106C /* MeanShiftTestCase.h */,
+				AE30FC6221CF82670016106C /* MeanShiftTestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -335,14 +375,28 @@
 		A1DECAF921C79F3F009F3693 /* ConfigItems */ = {
 			isa = PBXGroup;
 			children = (
+				AE30FC5A21CF71090016106C /* MaskView */,
 				A1DECAFA21C79F57009F3693 /* OpCvConfigItem.h */,
 				A1DECAFB21C79F57009F3693 /* OpCvConfigItem.m */,
 				A1DECAFD21C7A38F009F3693 /* SlideConfigItem.h */,
 				A1DECAFE21C7A38F009F3693 /* SlideConfigItem.m */,
 				8CF0652921C898900020FD6D /* SelectionConfigItem.h */,
 				8CF0652A21C898900020FD6D /* SelectionConfigItem.m */,
+				AE01783221CE2EAF00EB9E87 /* DrawMaskConfigItem.h */,
+				AE01783321CE2EAF00EB9E87 /* DrawMaskConfigItem.m */,
 			);
 			path = ConfigItems;
+			sourceTree = "<group>";
+		};
+		AE30FC5A21CF71090016106C /* MaskView */ = {
+			isa = PBXGroup;
+			children = (
+				AE30FC5B21CF711E0016106C /* DrawMaskView.h */,
+				AE30FC5C21CF711E0016106C /* DrawMaskView.m */,
+				AE30FC5E21CF72060016106C /* DrawRectMaskView.h */,
+				AE30FC5F21CF72060016106C /* DrawRectMaskView.m */,
+			);
+			path = MaskView;
 			sourceTree = "<group>";
 		};
 		AE43CE1521C7D7A300CD64D5 /* Base */ = {
@@ -471,9 +525,11 @@
 				AEF6AE5F21CBCB6E00428546 /* test2.png in Resources */,
 				AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */,
 				A1D68D3721CA27E4002F618F /* testcase.info in Resources */,
+				AE30FC5621CF52180016106C /* test4.png in Resources */,
 				AEE95F7A21CCCBEA00D89CD4 /* 10s6t_2.png in Resources */,
 				A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */,
 				A1DECAF421C754D5009F3693 /* test.png in Resources */,
+				AE01783921CE48F800EB9E87 /* test3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,9 +644,11 @@
 				AE08CA5A21CB90B60036B253 /* ImageMorphologicalTestCase.m in Sources */,
 				A1DECAEE21C74FC5009F3693 /* CVUtil.mm in Sources */,
 				8CF0652B21C898900020FD6D /* SelectionConfigItem.m in Sources */,
+				AE01782B21CE0ED400EB9E87 /* CannyTestCase.m in Sources */,
 				AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */,
 				AE08CA5721CB8E750036B253 /* LaplacianTestCase.m in Sources */,
 				A1D68D3421CA2658002F618F /* Section5TestCase.m in Sources */,
+				AE01783721CE301300EB9E87 /* WatershedTestCase.m in Sources */,
 				A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */,
 				A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */,
 				AE08CA5121CB7F960036B253 /* BilateralFilterTestCase.m in Sources */,
@@ -599,14 +657,20 @@
 				8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
 				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
+				AE30FC6021CF72060016106C /* DrawRectMaskView.m in Sources */,
+				AE30FC5921CF70BB0016106C /* GrabCutTestCase.m in Sources */,
 				A1D68D2021C8EC7B002F618F /* OpResultImagePreview.m in Sources */,
 				AEE95F7421CCB71900D89CD4 /* HighLightFixTestCase.m in Sources */,
+				AE30FC6321CF82670016106C /* MeanShiftTestCase.m in Sources */,
 				AEE95F8021CCE07200D89CD4 /* ImageTransformTestCase.m in Sources */,
 				A1D68D3321CA2658002F618F /* Section4TestCase.m in Sources */,
 				AEE95F7D21CCD2B500D89CD4 /* MaskTestCase.m in Sources */,
 				AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
+				AE01783421CE2EAF00EB9E87 /* DrawMaskConfigItem.m in Sources */,
 				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
+				AE30FC5D21CF711E0016106C /* DrawMaskView.m in Sources */,
+				AE01783121CE28EB00EB9E87 /* ImageCutTestCase.m in Sources */,
 				A1D68D2321C8F3FC002F618F /* MultiStageTestCase.m in Sources */,
 				8CF0652821C895DB0020FD6D /* BaseDrawTestVase.mm in Sources */,
 				AEF6AE6221CBD05700428546 /* GuassianBlurTestCase.m in Sources */,

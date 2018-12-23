@@ -15,8 +15,8 @@
 
 + (UIImage*)matNumberImage:(Mat)mat{
 
-#define MAX_WIDTH 10
-#define MAX_HEIGHT 10
+#define MAX_WIDTH 100
+#define MAX_HEIGHT 100
      
     Size2i singleDisplaySize = Size2i(40,40);
     int width = mat.size().width > MAX_WIDTH?MAX_WIDTH:mat.size().width;

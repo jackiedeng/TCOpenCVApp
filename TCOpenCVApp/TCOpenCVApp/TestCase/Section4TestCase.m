@@ -61,6 +61,11 @@
     
     uiCheck([CVUtil matNumberImage:resultMat],@"积分图");
     
+    Mat result2;
+    cv::integral(chanels, result2,CV_32F);
+    
+    uiCheck([CVUtil matNumberImage:result2],@"积分图2");
+    
     CV_TEST_CODE_END
 }
 

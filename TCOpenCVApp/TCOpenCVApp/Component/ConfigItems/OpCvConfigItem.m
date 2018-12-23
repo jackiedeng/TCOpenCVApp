@@ -38,7 +38,11 @@
 }
 
 - (NSString* _Nonnull)displayText{
-    return [NSString stringWithFormat:@"%@ : %@",self.title,self.value];
+    if([self.value isKindOfClass:[NSString class]]){
+        return [NSString stringWithFormat:@"%@ : %@",self.title,self.value];
+    }else{
+        return self.title;
+    }
 }
     
 - (void)fillValueToDict:(NSMutableDictionary*)dict{
