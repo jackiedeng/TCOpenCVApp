@@ -57,6 +57,8 @@
 		AEF6AE6221CBD05700428546 /* GuassianBlurTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF6AE6121CBD05700428546 /* GuassianBlurTestCase.m */; };
 		AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6721CBD6B200428546 /* 10s5t_1.JPG */; };
 		AEF6AE6A21CBD6B200428546 /* 10s5t_0.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */; };
+		AEFC89B421D0C01F00771A5E /* ContoursTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */; };
+		AEFC89B621D0CE5F00771A5E /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFC89B521D0CE5F00771A5E /* test5.png */; };
 		FB87D3CC37E3F14772A5FD48 /* libPods-TCOpenCVAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789F80FC93ECDE984DDA10F /* libPods-TCOpenCVAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +175,9 @@
 		AEF6AE6121CBD05700428546 /* GuassianBlurTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuassianBlurTestCase.m; sourceTree = "<group>"; };
 		AEF6AE6721CBD6B200428546 /* 10s5t_1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10s5t_1.JPG; sourceTree = "<group>"; };
 		AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10s5t_0.JPG; sourceTree = "<group>"; };
+		AEFC89B221D0C01F00771A5E /* ContoursTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContoursTestCase.h; sourceTree = "<group>"; };
+		AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContoursTestCase.m; sourceTree = "<group>"; };
+		AEFC89B521D0CE5F00771A5E /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test5.png; path = ../../../../test5.png; sourceTree = "<group>"; };
 		AFB4502B38EBA744E25207D2 /* Pods-TCOpenCVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +317,7 @@
 			children = (
 				AE01783821CE48F800EB9E87 /* test3.png */,
 				AE30FC5521CF52180016106C /* test4.png */,
+				AEFC89B521D0CE5F00771A5E /* test5.png */,
 				AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */,
 				AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */,
 				AEE95F7921CCCBEA00D89CD4 /* 10s6t_2.png */,
@@ -368,6 +374,8 @@
 				AE30FC5821CF70BB0016106C /* GrabCutTestCase.m */,
 				AE30FC6121CF82670016106C /* MeanShiftTestCase.h */,
 				AE30FC6221CF82670016106C /* MeanShiftTestCase.m */,
+				AEFC89B221D0C01F00771A5E /* ContoursTestCase.h */,
+				AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -524,6 +532,7 @@
 				AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */,
 				AEF6AE5F21CBCB6E00428546 /* test2.png in Resources */,
 				AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */,
+				AEFC89B621D0CE5F00771A5E /* test5.png in Resources */,
 				A1D68D3721CA27E4002F618F /* testcase.info in Resources */,
 				AE30FC5621CF52180016106C /* test4.png in Resources */,
 				AEE95F7A21CCCBEA00D89CD4 /* 10s6t_2.png in Resources */,
@@ -667,6 +676,7 @@
 				AEE95F7D21CCD2B500D89CD4 /* MaskTestCase.m in Sources */,
 				AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
+				AEFC89B421D0C01F00771A5E /* ContoursTestCase.m in Sources */,
 				AE01783421CE2EAF00EB9E87 /* DrawMaskConfigItem.m in Sources */,
 				A1DECAF821C79CA2009F3693 /* OpCVBaseViewController.mm in Sources */,
 				AE30FC5D21CF711E0016106C /* DrawMaskView.m in Sources */,

@@ -68,7 +68,7 @@
     
     Mat testImage,meashiftMat;
     UIImageToMat(orginImage, testImage);
-//
+//666ttty7
     cvtColor(testImage, testImage, CV_RGBA2RGB);
   
     cv::pyrMeanShiftFiltering(testImage, meashiftMat, 20, 40);
