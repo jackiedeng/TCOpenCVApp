@@ -18,6 +18,9 @@
 		A1D68D3321CA2658002F618F /* Section4TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D2F21CA2657002F618F /* Section4TestCase.m */; };
 		A1D68D3421CA2658002F618F /* Section5TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D3121CA2658002F618F /* Section5TestCase.m */; };
 		A1D68D3721CA27E4002F618F /* testcase.info in Resources */ = {isa = PBXBuildFile; fileRef = A1D68D3621CA27E4002F618F /* testcase.info */; };
+		A1D68D3A21D1C90D002F618F /* FindContoursTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D3921D1C90D002F618F /* FindContoursTestCase.mm */; };
+		A1D68D3D21D20EE8002F618F /* DrawTestCase1.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */; };
+		A1D68D4121D22000002F618F /* SketchStyle.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D4021D22000002F618F /* SketchStyle.mm */; };
 		A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABB21C74CD4009F3693 /* AppDelegate.m */; };
 		A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABE21C74CD4009F3693 /* ViewController.m */; };
 		A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAC021C74CD4009F3693 /* Main.storyboard */; };
@@ -58,7 +61,6 @@
 		AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6721CBD6B200428546 /* 10s5t_1.JPG */; };
 		AEF6AE6A21CBD6B200428546 /* 10s5t_0.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */; };
 		AEFC89B421D0C01F00771A5E /* ContoursTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */; };
-		AEFC89B621D0CE5F00771A5E /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFC89B521D0CE5F00771A5E /* test5.png */; };
 		FB87D3CC37E3F14772A5FD48 /* libPods-TCOpenCVAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789F80FC93ECDE984DDA10F /* libPods-TCOpenCVAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,12 @@
 		A1D68D3121CA2658002F618F /* Section5TestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section5TestCase.m; sourceTree = "<group>"; };
 		A1D68D3221CA2658002F618F /* Section5TestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section5TestCase.h; sourceTree = "<group>"; };
 		A1D68D3621CA27E4002F618F /* testcase.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testcase.info; sourceTree = SOURCE_ROOT; };
+		A1D68D3821D1C90D002F618F /* FindContoursTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindContoursTestCase.h; sourceTree = "<group>"; };
+		A1D68D3921D1C90D002F618F /* FindContoursTestCase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FindContoursTestCase.mm; sourceTree = "<group>"; };
+		A1D68D3B21D20EE8002F618F /* DrawTestCase1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTestCase1.h; sourceTree = "<group>"; };
+		A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTestCase1.m; sourceTree = "<group>"; };
+		A1D68D3F21D22000002F618F /* SketchStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SketchStyle.h; sourceTree = "<group>"; };
+		A1D68D4021D22000002F618F /* SketchStyle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SketchStyle.mm; sourceTree = "<group>"; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,7 +185,6 @@
 		AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10s5t_0.JPG; sourceTree = "<group>"; };
 		AEFC89B221D0C01F00771A5E /* ContoursTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContoursTestCase.h; sourceTree = "<group>"; };
 		AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContoursTestCase.m; sourceTree = "<group>"; };
-		AEFC89B521D0CE5F00771A5E /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test5.png; path = ../../../../test5.png; sourceTree = "<group>"; };
 		AFB4502B38EBA744E25207D2 /* Pods-TCOpenCVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,11 +251,21 @@
 		A1D68D3521CA266E002F618F /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A1D68D3E21D21FE7002F618F /* Style */,
 				A1D68D2E21CA2609002F618F /* Util */,
 				AE43CE1521C7D7A300CD64D5 /* Base */,
 				A1DECAF921C79F3F009F3693 /* ConfigItems */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		A1D68D3E21D21FE7002F618F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A1D68D3F21D22000002F618F /* SketchStyle.h */,
+				A1D68D4021D22000002F618F /* SketchStyle.mm */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		A1DECAAE21C74CD4009F3693 = {
@@ -317,7 +334,6 @@
 			children = (
 				AE01783821CE48F800EB9E87 /* test3.png */,
 				AE30FC5521CF52180016106C /* test4.png */,
-				AEFC89B521D0CE5F00771A5E /* test5.png */,
 				AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */,
 				AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */,
 				AEE95F7921CCCBEA00D89CD4 /* 10s6t_2.png */,
@@ -376,6 +392,10 @@
 				AE30FC6221CF82670016106C /* MeanShiftTestCase.m */,
 				AEFC89B221D0C01F00771A5E /* ContoursTestCase.h */,
 				AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */,
+				A1D68D3821D1C90D002F618F /* FindContoursTestCase.h */,
+				A1D68D3921D1C90D002F618F /* FindContoursTestCase.mm */,
+				A1D68D3B21D20EE8002F618F /* DrawTestCase1.h */,
+				A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -532,7 +552,6 @@
 				AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */,
 				AEF6AE5F21CBCB6E00428546 /* test2.png in Resources */,
 				AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */,
-				AEFC89B621D0CE5F00771A5E /* test5.png in Resources */,
 				A1D68D3721CA27E4002F618F /* testcase.info in Resources */,
 				AE30FC5621CF52180016106C /* test4.png in Resources */,
 				AEE95F7A21CCCBEA00D89CD4 /* 10s6t_2.png in Resources */,
@@ -653,6 +672,7 @@
 				AE08CA5A21CB90B60036B253 /* ImageMorphologicalTestCase.m in Sources */,
 				A1DECAEE21C74FC5009F3693 /* CVUtil.mm in Sources */,
 				8CF0652B21C898900020FD6D /* SelectionConfigItem.m in Sources */,
+				A1D68D4121D22000002F618F /* SketchStyle.mm in Sources */,
 				AE01782B21CE0ED400EB9E87 /* CannyTestCase.m in Sources */,
 				AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */,
 				AE08CA5721CB8E750036B253 /* LaplacianTestCase.m in Sources */,
@@ -665,6 +685,7 @@
 				8CF0652521C88E4B0020FD6D /* ContrastAndBrightnessTestCase.m in Sources */,
 				8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
+				A1D68D3A21D1C90D002F618F /* FindContoursTestCase.mm in Sources */,
 				A1DECAFF21C7A38F009F3693 /* SlideConfigItem.m in Sources */,
 				AE30FC6021CF72060016106C /* DrawRectMaskView.m in Sources */,
 				AE30FC5921CF70BB0016106C /* GrabCutTestCase.m in Sources */,
@@ -674,6 +695,7 @@
 				AEE95F8021CCE07200D89CD4 /* ImageTransformTestCase.m in Sources */,
 				A1D68D3321CA2658002F618F /* Section4TestCase.m in Sources */,
 				AEE95F7D21CCD2B500D89CD4 /* MaskTestCase.m in Sources */,
+				A1D68D3D21D20EE8002F618F /* DrawTestCase1.m in Sources */,
 				AE08CA5421CB852E0036B253 /* SobelTestCase.m in Sources */,
 				A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */,
 				AEFC89B421D0C01F00771A5E /* ContoursTestCase.m in Sources */,

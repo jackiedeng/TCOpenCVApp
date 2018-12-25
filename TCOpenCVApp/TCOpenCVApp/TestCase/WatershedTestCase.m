@@ -23,7 +23,7 @@
     return @[
              [DrawMaskConfigItem drawMask:@"draw"
                                       key:@"mask"
-                                    image:[UIImage imageNamed:@"test2.png"]]
+                                    image:[UIImage imageNamed:@"test3.png"]]
              ];
 }
 

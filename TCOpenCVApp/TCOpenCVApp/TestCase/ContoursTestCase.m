@@ -51,7 +51,6 @@
     
     check(src,@"origin");
     
-    
     cvtColor(src, src, CV_RGBA2RGB);
     Mat backGround;
     backGround = src.clone();
