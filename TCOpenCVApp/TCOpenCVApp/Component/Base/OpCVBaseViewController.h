@@ -52,6 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString*)valueFromConfig:(NSString*)key config:(NSDictionary*)config;
 - (float)floatValueFromConfig:(NSString*)key config:(NSDictionary*)config;
+
+- (UIImage*)imageToSave;
+
 @end
 
 NS_ASSUME_NONNULL_END

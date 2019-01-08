@@ -60,7 +60,7 @@
     [slide setMinimumValue:range.location];
     [slide setMaximumValue:range.location+range.length];
     [slide setValue:defaultValue];
-//    [slide setContinuous:[[config objectForKey:continueKey] boolValue]];
+    [slide setContinuous:false];
 
     [slide addTarget:self
               action:@selector(onValueChange:)

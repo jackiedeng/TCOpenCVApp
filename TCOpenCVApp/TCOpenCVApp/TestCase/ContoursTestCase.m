@@ -51,6 +51,7 @@
     
     check(src,@"origin");
     
+    
     cvtColor(src, src, CV_RGBA2RGB);
     Mat backGround;
     backGround = src.clone();
@@ -84,7 +85,7 @@
     cv::minMaxLoc(src, &min,&max);
     double lower = cv::abs( (max-min)/scale );
     double higher = cv::abs( (max-min)/scale *(scale-1) );
-    double mid = (lower+higher)/2;
+//    double mid = (lower+higher)/2;
 //    cv::Canny(result, result,mid,mid);
     cv::Canny(src, src, lower, higher);
     

@@ -48,6 +48,11 @@
                                              selector:@selector(onGetImageFromAlbumNotification:)
                                                  name:@"getImageFromAlbumNotification"
                                                object:nil];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"save"
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(onSaveImage)];
 }
     
 
@@ -169,7 +174,7 @@
     
     UIImagePickerController * picker = [UIImagePickerController new];
     
-    picker.allowsEditing = YES;
+//    picker.allowsEditing = YES;
     picker.delegate = self;
     
     [self.navigationController presentViewController:picker
@@ -182,8 +187,25 @@
 #pragma mark image get
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info{
     
+    UIImage * image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    if(image.size.width > 1000 || image.size.height > 1000){
+        
+        float scalew = 1000/image.size.width;
+        float scaleh = 1000/image.size.height;
+        
+        float scale = scaleh > scalew?scalew:scaleh;
+        
+        CGRect rect = CGRectMake(0, 0, image.size.width*scale, image.size.height*scalew);
+        UIGraphicsBeginImageContext(rect.size);
+        [image drawInRect:rect];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"onGetAlbumImageBackNotification"
-                                                        object:[info objectForKey:UIImagePickerControllerEditedImage]
+                                                        object:image
                                                       userInfo:nil];
     
     [picker dismissViewControllerAnimated:YES
@@ -380,5 +402,30 @@
     return 0;
 }
 
+- (void)onSaveImage{
+    
+    if([self imageToSave]){
+     
+        UIImageWriteToSavedPhotosAlbum([self imageToSave], nil, nil, nil);
+        
+        NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        
+        
+        NSString *filePath = [[paths objectAtIndex:0]stringByAppendingPathComponent:
+                              [NSString stringWithFormat:@"demo.png"]];  // 保存文件的名称
+        
+        BOOL result =[UIImagePNGRepresentation([self imageToSave]) writeToFile:filePath
+                                                                    atomically:YES]; // 保存成功会返回YES
+        if (result == YES) {
+            NSLog(@"保存成功:%@",filePath);
+        }
+        
+    }
+    
+}
+
+- (UIImage*)imageToSave{
+    return nil;
+}
 
 @end

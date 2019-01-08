@@ -21,6 +21,8 @@
 		A1D68D3A21D1C90D002F618F /* FindContoursTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D3921D1C90D002F618F /* FindContoursTestCase.mm */; };
 		A1D68D3D21D20EE8002F618F /* DrawTestCase1.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */; };
 		A1D68D4121D22000002F618F /* SketchStyle.mm in Sources */ = {isa = PBXBuildFile; fileRef = A1D68D4021D22000002F618F /* SketchStyle.mm */; };
+		A1D68D4421D373BC002F618F /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D68D4221D373BB002F618F /* test5.png */; };
+		A1D68D4521D373BC002F618F /* test6.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D68D4321D373BC002F618F /* test6.png */; };
 		A1DECABC21C74CD4009F3693 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABB21C74CD4009F3693 /* AppDelegate.m */; };
 		A1DECABF21C74CD4009F3693 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DECABE21C74CD4009F3693 /* ViewController.m */; };
 		A1DECAC221C74CD4009F3693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DECAC021C74CD4009F3693 /* Main.storyboard */; };
@@ -111,6 +113,8 @@
 		A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTestCase1.m; sourceTree = "<group>"; };
 		A1D68D3F21D22000002F618F /* SketchStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SketchStyle.h; sourceTree = "<group>"; };
 		A1D68D4021D22000002F618F /* SketchStyle.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SketchStyle.mm; sourceTree = "<group>"; };
+		A1D68D4221D373BB002F618F /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
+		A1D68D4321D373BC002F618F /* test6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test6.png; sourceTree = "<group>"; };
 		A1DECAB721C74CD4009F3693 /* TCOpenCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCOpenCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DECABA21C74CD4009F3693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1DECABB21C74CD4009F3693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 			children = (
 				AE01783821CE48F800EB9E87 /* test3.png */,
 				AE30FC5521CF52180016106C /* test4.png */,
+				A1D68D4221D373BB002F618F /* test5.png */,
+				A1D68D4321D373BC002F618F /* test6.png */,
 				AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */,
 				AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */,
 				AEE95F7921CCCBEA00D89CD4 /* 10s6t_2.png */,
@@ -552,6 +558,8 @@
 				AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */,
 				AEF6AE5F21CBCB6E00428546 /* test2.png in Resources */,
 				AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */,
+				A1D68D4421D373BC002F618F /* test5.png in Resources */,
+				A1D68D4521D373BC002F618F /* test6.png in Resources */,
 				A1D68D3721CA27E4002F618F /* testcase.info in Resources */,
 				AE30FC5621CF52180016106C /* test4.png in Resources */,
 				AEE95F7A21CCCBEA00D89CD4 /* 10s6t_2.png in Resources */,
