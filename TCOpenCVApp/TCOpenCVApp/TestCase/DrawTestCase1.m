@@ -30,7 +30,7 @@
              [DrawMaskConfigItem drawMaskWithType:NONE_MASK
                                             title:@"原始图片"
                                               key:@"mask"
-                                            image:[UIImage imageNamed:@"test3.png"]]
+                                            image:[UIImage imageNamed:@"test5.png"]]
              ];
 }
 
@@ -47,6 +47,8 @@
     
     Mat src;
     UIImageToMat(image, src);
+    
+    check([self drawLine:1 size:src.size()],@"line");
     
     cv::cvtColor(src, src, CV_RGBA2RGB);
     
@@ -92,7 +94,7 @@
     
     for(int i = 0; i < colorNumber; i++){
         
-        check(matChanels[i],[@"beforeredraw" stringByAppendingFormat:@"%d",i]);
+//        check(matChanels[i],[@"beforeredraw" stringByAppendingFormat:@"%d",i]);
         matChanels[i] = [self redrawAndMakeContours:matChanels[i] color:color[i] stageImageSet:check];
         check(matChanels[i],[@"aflterredraw" stringByAppendingFormat:@"%d",i]);
     }
@@ -114,6 +116,8 @@
 - (Mat)redrawAndMakeContours:(Mat)mat
                        color:(Vec3b)color
  stageImageSet:(void(^)(Mat img,NSString *label))check{
+    
+
     
     Mat labels,temp,stats;
     
@@ -168,6 +172,36 @@
     
     
     return mat;
+}
+
+- (Mat)drawLine:(int)depth
+           size:(cv::Size)size{
+    
+    Mat lineMat = Mat(size,CV_8UC3,Scalar(255,255,255));
+//    int radius= 1;
+    for(int i = 0; i < 20000; i++)
+    {
+//        cv::circle(lineMat, cv::Point(rand()%100,rand()%100), radius, Scalar(200,200,200));
+        
+        Vec3b vec = lineMat.at<Vec3b>(rand()%50,rand()%50);
+        
+        int color =  vec[0];
+        
+        if(color < depth){
+            color = depth;
+        }else{
+            color -= 40;
+        }
+        
+        lineMat.at<Vec3b>((int)(rand()%size.height),(int)(rand()%size.width)) = Vec3b(color,color,color);
+    }
+   
+//    Mat result;
+//    cv::copyMakeBorder(lineMat, result, (size.height-50)/2, (size.height-50)/2, (size.width-50)/2, (size.width-50)/2, cv::BORDER_REFLECT101);
+    
+//    cout<<lineMat<<endl;
+    return lineMat;
+    
 }
 
 @end

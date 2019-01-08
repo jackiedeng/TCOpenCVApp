@@ -50,6 +50,7 @@
 		AE30FC6021CF72060016106C /* DrawRectMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC5F21CF72060016106C /* DrawRectMaskView.m */; };
 		AE30FC6321CF82670016106C /* MeanShiftTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE30FC6221CF82670016106C /* MeanShiftTestCase.m */; };
 		AE43CE1821C7D80500CD64D5 /* CVTransparentTestCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */; };
+		AE6CB5D221E4F01B00629057 /* PanStyleTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6CB5D121E4F01B00629057 /* PanStyleTestCase.m */; };
 		AEE95F7421CCB71900D89CD4 /* HighLightFixTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE95F7321CCB71900D89CD4 /* HighLightFixTestCase.m */; };
 		AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */; };
 		AEE95F7821CCB76400D89CD4 /* 10s6t_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */; };
@@ -61,6 +62,7 @@
 		AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6721CBD6B200428546 /* 10s5t_1.JPG */; };
 		AEF6AE6A21CBD6B200428546 /* 10s5t_0.JPG in Resources */ = {isa = PBXBuildFile; fileRef = AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */; };
 		AEFC89B421D0C01F00771A5E /* ContoursTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */; };
+		AEFC89B821D262F600771A5E /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = AEFC89B721D262F600771A5E /* test5.png */; };
 		FB87D3CC37E3F14772A5FD48 /* libPods-TCOpenCVAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789F80FC93ECDE984DDA10F /* libPods-TCOpenCVAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,8 @@
 		AE30FC6221CF82670016106C /* MeanShiftTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeanShiftTestCase.m; sourceTree = "<group>"; };
 		AE43CE1621C7D80500CD64D5 /* CVTransparentTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVTransparentTestCase.h; sourceTree = "<group>"; };
 		AE43CE1721C7D80500CD64D5 /* CVTransparentTestCase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CVTransparentTestCase.mm; sourceTree = "<group>"; };
+		AE6CB5D021E4F01B00629057 /* PanStyleTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanStyleTestCase.h; sourceTree = "<group>"; };
+		AE6CB5D121E4F01B00629057 /* PanStyleTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanStyleTestCase.m; sourceTree = "<group>"; };
 		AEE95F7221CCB71900D89CD4 /* HighLightFixTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighLightFixTestCase.h; sourceTree = "<group>"; };
 		AEE95F7321CCB71900D89CD4 /* HighLightFixTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighLightFixTestCase.m; sourceTree = "<group>"; };
 		AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10s6t_0.png; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		AEF6AE6821CBD6B200428546 /* 10s5t_0.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10s5t_0.JPG; sourceTree = "<group>"; };
 		AEFC89B221D0C01F00771A5E /* ContoursTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContoursTestCase.h; sourceTree = "<group>"; };
 		AEFC89B321D0C01F00771A5E /* ContoursTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContoursTestCase.m; sourceTree = "<group>"; };
+		AEFC89B721D262F600771A5E /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
 		AFB4502B38EBA744E25207D2 /* Pods-TCOpenCVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCOpenCVApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCOpenCVApp/Pods-TCOpenCVApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +339,7 @@
 			children = (
 				AE01783821CE48F800EB9E87 /* test3.png */,
 				AE30FC5521CF52180016106C /* test4.png */,
+				AEFC89B721D262F600771A5E /* test5.png */,
 				AEE95F7521CCB76400D89CD4 /* 10s6t_0.png */,
 				AEE95F7621CCB76400D89CD4 /* 10s6t_1.png */,
 				AEE95F7921CCCBEA00D89CD4 /* 10s6t_2.png */,
@@ -396,6 +402,8 @@
 				A1D68D3921D1C90D002F618F /* FindContoursTestCase.mm */,
 				A1D68D3B21D20EE8002F618F /* DrawTestCase1.h */,
 				A1D68D3C21D20EE8002F618F /* DrawTestCase1.m */,
+				AE6CB5D021E4F01B00629057 /* PanStyleTestCase.h */,
+				AE6CB5D121E4F01B00629057 /* PanStyleTestCase.m */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -552,6 +560,7 @@
 				AEE95F7721CCB76400D89CD4 /* 10s6t_0.png in Resources */,
 				AEF6AE5F21CBCB6E00428546 /* test2.png in Resources */,
 				AEF6AE6921CBD6B200428546 /* 10s5t_1.JPG in Resources */,
+				AEFC89B821D262F600771A5E /* test5.png in Resources */,
 				A1D68D3721CA27E4002F618F /* testcase.info in Resources */,
 				AE30FC5621CF52180016106C /* test4.png in Resources */,
 				AEE95F7A21CCCBEA00D89CD4 /* 10s6t_2.png in Resources */,
@@ -682,6 +691,7 @@
 				A1DECAFC21C79F57009F3693 /* OpCvConfigItem.m in Sources */,
 				AE08CA5121CB7F960036B253 /* BilateralFilterTestCase.m in Sources */,
 				AE08CA4E21CB6A3A0036B253 /* Section10TestCase.m in Sources */,
+				AE6CB5D221E4F01B00629057 /* PanStyleTestCase.m in Sources */,
 				8CF0652521C88E4B0020FD6D /* ContrastAndBrightnessTestCase.m in Sources */,
 				8CF0652E21C8B9B50020FD6D /* RandomDrawTestCase.m in Sources */,
 				A1DECACA21C74CD6009F3693 /* main.mm in Sources */,
